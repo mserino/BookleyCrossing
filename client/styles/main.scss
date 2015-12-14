@@ -1,9 +1,12 @@
+/* Settings */
 @import '{reywood:bootstrap3-sass}/bootstrap';
 
-.hello {
-	background-color: red;
-	padding: 20px;
-	&__hello {
-		background-color: blue;
-	}
-}
+/* Globals */
+@import 'globals/colors';
+@import 'globals/typography';
+@import 'globals/fonts';
+// Global body configs
+@import 'globals/globals';
+
+/* Components */
+@import 'books/book';

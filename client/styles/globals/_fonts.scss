@@ -1,0 +1,16 @@
+/* Fonts */
+
+// Montserrat
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+// Oleo
+@import url(https://fonts.googleapis.com/css?family=Oleo+Script:400,700);
+
+
+@mixin fontSansSerif() {
+	font-family: 'Montserrat', sans-serif;
+}
+
+@mixin fontSerif() {
+	font-family: 'Oleo Script', cursive;
+}
