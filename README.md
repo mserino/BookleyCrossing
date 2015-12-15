@@ -18,7 +18,9 @@ https://github.com/englue/meteor-bootstrap3-sass/
 Iron router  
 https://github.com/iron-meteor/iron-router  
 Spinner  
-https://github.com/SachaG/meteor-spin
+https://github.com/SachaG/meteor-spin  
+Font Awesome  
+https://atmospherejs.com/fortawesome/fontawesome
 
 **Fonts**  
 Montserrat (Google Font)  
