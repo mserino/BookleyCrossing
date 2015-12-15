@@ -1,5 +1,6 @@
 Bookley Crossing
 ================
+Office project created by [@mserino](http://github.com/mserino), [@ndillon1](http://github.com/ndillon1) and [@nicolepell](http://github.com/nicolepell)  
 
 #### How to start
 Install meteor  

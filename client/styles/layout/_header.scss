@@ -6,6 +6,9 @@ header {
 			display: inline-block;
 			list-style: none;
 			padding: 10px;
+			& a:hover {
+				text-decoration: none;
+			}
 		}
 	}
 }
