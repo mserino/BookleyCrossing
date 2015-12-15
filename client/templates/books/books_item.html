@@ -1,6 +1,8 @@
 <template name="bookItem">
 	<div class="book">
-		<h3 class="book__item">{{title}}</h3>
+		<a href="{{pathFor 'bookPage'}}">
+			<h3 class="book__item">{{title}}</h3>
+		</a>
 		<h4>{{author}}</h4>
 	</div>
 </template>
