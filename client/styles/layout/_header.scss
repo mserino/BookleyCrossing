@@ -1,0 +1,11 @@
+header {
+	background-color: #e6e6e6;
+
+	.navigation {
+		&__link {
+			display: inline-block;
+			list-style: none;
+			padding: 10px;
+		}
+	}
+}
