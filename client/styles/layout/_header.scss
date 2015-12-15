@@ -1,13 +1,19 @@
-header {
+.header {
 	background-color: #e6e6e6;
+	&__list {
+		margin: 0;
+		padding: 0;
+	}
 
-	.navigation {
-		&__link {
-			display: inline-block;
-			list-style: none;
-			padding: 10px;
-			& a:hover {
+	&__link {
+		display: inline-block;
+		list-style: none;
+		padding: 10px;
+		&:hover {
+			background-color: darkblue;
+			a {
 				text-decoration: none;
+				color: white;
 			}
 		}
 	}
