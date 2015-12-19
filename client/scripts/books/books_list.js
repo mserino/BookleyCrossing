@@ -1,5 +1,5 @@
 Template.booksList.helpers({
 	books: function() {
-		return Books.find();
+		return Books.find({}, {sort: {submitted: -1}});
 	}
 });
