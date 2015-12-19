@@ -1,24 +1,7 @@
 <template name="header">
 	<header class="header">
-		<ul class="header__list">
-			<li class="header__link">
-				<a href="{{pathFor 'homepage'}}">
-					<i class="fa fa-home"></i>
-					Homepage
-				</a>
-			</li>
-			<li class="header__link">
-				<a href="{{pathFor 'booksList'}}">
-					<i class="fa fa-book"></i>
-					Books
-				</a>
-			</li>
-			<li class="header__link">
-				<a href="{{pathFor 'bookAdd'}}">
-					<i class="fa fa-plus-square"></i>
-					Add a book
-				</a>
-			</li>
-		</ul>
+		{{> headerTitle}}
+		{{> headerBorderBottom}}
+		{{> headerLinks}}
 	</header>
 </template>

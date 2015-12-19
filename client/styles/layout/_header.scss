@@ -1,5 +1,8 @@
+@import "header/header-border";
+@import "header/header-title";
+
 .header {
-	background-color: #e6e6e6;
+	background-color: $main-white;
 	&__list {
 		margin: 0;
 		padding: 0;

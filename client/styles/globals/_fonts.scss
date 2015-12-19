@@ -6,6 +6,9 @@
 // Oleo
 @import url(https://fonts.googleapis.com/css?family=Oleo+Script:400,700);
 
+// Delius
+@import url(https://fonts.googleapis.com/css?family=Delius);
+
 
 @mixin fontSansSerif() {
 	font-family: 'Montserrat', sans-serif;
@@ -13,4 +16,8 @@
 
 @mixin fontSerif() {
 	font-family: 'Oleo Script', cursive;
+}
+
+@mixin fontHandWriting() {
+	font-family: 'Delius', cursive;
 }

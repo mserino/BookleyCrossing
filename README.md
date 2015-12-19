@@ -20,8 +20,11 @@ https://github.com/iron-meteor/iron-router
 Spinner  
 https://github.com/SachaG/meteor-spin  
 Font Awesome  
-https://atmospherejs.com/fortawesome/fontawesome
+https://atmospherejs.com/fortawesome/fontawesome  
+Router title  
+https://github.com/VeliovGroup/Meteor-iron-router-title/
 
 **Fonts**  
-Montserrat (Google Font)  
-Oleo Script (Google Font)
+Montserrat (Google Fonts)  
+Oleo Script (Google Fonts)  
+Delius (Google Fonts)

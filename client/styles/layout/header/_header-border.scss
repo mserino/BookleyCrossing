@@ -1,0 +1,20 @@
+.header-border {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	&__item {
+		display: inline-block;
+		height: 7px;
+
+		&:nth-child(1) {
+			background-color: $main-pink;
+		}
+		&:nth-child(2) {
+			background-color: $main-green;
+		}
+		&:nth-child(3) {
+			background-color: $main-orange;
+		}
+	}
+}
