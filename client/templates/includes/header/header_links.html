@@ -1,14 +1,14 @@
 <template name="headerLinks">
 	<div class="header__list-container">
 		<ul class="header__list">
-			<li class="header__link">
-				<a href="{{pathFor 'booksList'}}">
+			<li class="header__list-item">
+				<a href="{{pathFor 'booksList'}}" class="header__link {{selected 'booksList'}}">
 					<i class="fa fa-book"></i>
 					Browse Books
 				</a>
 			</li>
-			<li class="header__link">
-				<a href="{{pathFor 'bookAdd'}}">
+			<li class="header__list-item">
+				<a href="{{pathFor 'bookAdd'}}" class="header__link {{selected 'bookAdd'}}">
 					<i class="fa fa-plus-square"></i>
 					Add a book
 				</a>

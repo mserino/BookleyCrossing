@@ -5,8 +5,7 @@
 	background-color: $main-white;
 
 	&__list-container {
-		// padding-left: 100px;
-		border-bottom: 1px solid $main-grey;
+		border-bottom: 1px solid $light-grey;
 	}
 
 	&__list {
@@ -15,16 +14,21 @@
 		width: 800px;
 	}
 
-	&__link {
+	&__list-item {
 		display: inline-block;
 		list-style: none;
+	}
+
+	&__link {
 		padding: 10px 20px;
-		&:hover {
-			background-color: darkblue;
-			a {
-				text-decoration: none;
-				color: white;
-			}
+		color: $dark-grey;
+		display: block;
+		&:focus, &:hover {
+			text-decoration: none;
+		}
+		&:hover, &.selected {
+			background-color: $light-grey;
+			color: $dark-grey;
 		}
 	}
 }
