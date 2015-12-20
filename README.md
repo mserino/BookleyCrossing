@@ -24,7 +24,9 @@ https://github.com/SachaG/meteor-spin
 Font Awesome  
 https://atmospherejs.com/fortawesome/fontawesome  
 Router title  
-https://github.com/VeliovGroup/Meteor-iron-router-title/
+https://github.com/VeliovGroup/Meteor-iron-router-title/  
+Flash message  
+https://atmospherejs.com/mrt/flash-messages
 
 **Fonts**  
 Montserrat (Google Fonts)  

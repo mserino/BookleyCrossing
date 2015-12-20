@@ -10,11 +10,15 @@ Template.bookAdd.events({
 		//calling method in collections/books.js
 		Meteor.call('bookAdd', book, function(error, result) {
 			if (error)
-				return alert(error.reason);
+				FlashMessages.sendError(error.reason, { autoHide: false, hideDelay: 5000 });
+				Router.go('bookAdd');
 
 			if (result.bookExists)
-				alert('This book has already been posted');
-			
+				FlashMessages.sendWarning('This book has already been posted', { autoHide: true, hideDelay: 5000 });
+
+			if (!result.bookExists)
+				FlashMessages.sendSuccess('Book successfully added to the bookshelf', {autoHide: true, hideDelay: 5000 });
+
 			Router.go('bookPage', {_id: result._id});
 		});
 	}

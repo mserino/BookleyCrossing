@@ -1,0 +1,18 @@
+.alert {
+	text-align: center;
+	&-warning {
+		color: darken($main-orange, 25%);
+		background-color: lighten($main-orange, 30%);
+		border-color: lighten($main-orange, 25%);
+	}
+	&-success {
+		color: darken($main-green, 25%);
+		background-color: lighten($main-green, 30%);
+		border-color: lighten($main-green, 25%);
+	}
+	&-error {
+		color: darken($main-pink, 25%);
+		background-color: lighten($main-pink, 30%);
+		border-color: lighten($main-pink, 25%);
+	}
+}
