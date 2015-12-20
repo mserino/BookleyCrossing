@@ -18,9 +18,9 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 insecure                # Allow all DB writes from clients (for prototyping)
 fourseven:scss
-reywood:bootstrap3-sass
 iron:router
 sacha:spin
 fortawesome:fontawesome
 check
 ostrio:iron-router-title
+twbs:bootstrap

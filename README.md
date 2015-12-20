@@ -13,8 +13,10 @@ Start the project
 `$ meteor`
 
 **Packages**  
-Bootstrap 3 Sass  
-https://github.com/englue/meteor-bootstrap3-sass/  
+Sass  
+https://atmospherejs.com/fourseven/scss  
+Twitter Bootstrap  
+https://atmospherejs.com/twbs/bootstrap  
 Iron router  
 https://github.com/iron-meteor/iron-router  
 Spinner  

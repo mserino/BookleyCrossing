@@ -1,6 +1,13 @@
 .header-title {
+	@include fontHandWriting;
 	text-align: center;
 	padding: 30px 0;
-	@include fontHandWriting;
 	font-size: 3.5rem;
+	a {
+		color: $main-black;
+		&:hover, &:focus {
+			color: $main-black;
+			text-decoration: none;
+		}
+	}
 }
