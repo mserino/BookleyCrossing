@@ -5,18 +5,32 @@
 	background-color: $main-white;
 
 	&__list-container {
-		border-bottom: 1px solid $light-grey;
+		position: fixed;
+    height: 100%;
+    background: lighten($dark-grey, 30%);
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    width: 70%;
+    left: -100%;
+    transition: all 0.5s ease-in-out;
+    &.open {
+    	left: 0;
+    	transition: all 0.5s ease-in-out;
+    }
 	}
 
 	&__list {
-		margin: 0 auto;
 		padding: 0;
-		width: 800px;
+		margin: 0;
+		padding-top: 35px;
 	}
 
 	&__list-item {
-		display: inline-block;
+		display: block;
 		list-style: none;
+		padding: 0;
+		padding-right: 40px;
 	}
 
 	&__link {
@@ -29,6 +43,44 @@
 		&:hover, &.selected {
 			background-color: $light-grey;
 			color: $dark-grey;
+		}
+	}
+	&__close {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		cursor: pointer;
+	}
+	&__hamburger {
+		position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    color: $main-pink;
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+	.header {
+		&__list-container {
+			position: relative;
+			height: auto;
+			width: 100%;
+			background-color: $main-white;
+			border-bottom: 1px solid $light-grey;
+			left: 0;
+		}
+
+		&__list {
+			margin: 0 auto;
+			padding: 0;
+			width: 800px;
+		}
+
+		&__list-item {
+			display: inline-block;
+			padding: 0;
 		}
 	}
 }

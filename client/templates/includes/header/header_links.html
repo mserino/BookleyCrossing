@@ -1,15 +1,19 @@
 <template name="headerLinks">
-	<div class="header__list-container">
+	<div class="header__list-container col-xs-12 js-header-menu">
+		<i class="fa fa-times fa-2x js-header-close header__close visible-xs"></i>
 		<ul class="header__list">
-			<li class="header__list-item">
+			<li class="header__list-item js-header-list-item visible-xs">
+				<a href="{{pathFor 'homepage'}}" class="header__link {{selected 'homepage'}}">
+					Homepage
+				</a>
+			</li>
+			<li class="header__list-item js-header-list-item">
 				<a href="{{pathFor 'booksList'}}" class="header__link {{selected 'booksList'}}">
-					<i class="fa fa-book"></i>
 					Browse Books
 				</a>
 			</li>
-			<li class="header__list-item">
+			<li class="header__list-item js-header-list-item">
 				<a href="{{pathFor 'bookAdd'}}" class="header__link {{selected 'bookAdd'}}">
-					<i class="fa fa-plus-square"></i>
 					Add a book
 				</a>
 			</li>
