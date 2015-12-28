@@ -5,18 +5,19 @@
 	background-color: $main-white;
 
 	&__list-container {
-		position: fixed;
+		position: absolute;
     height: 100%;
-    background: lighten($dark-grey, 30%);
+    background: rgba(lighten($dark-grey, 30%), 0.8);
     z-index: 1;
     padding: 0;
     margin: 0;
-    width: 70%;
-    left: -100%;
-    transition: all 0.5s ease-in-out;
+    width: 15%;
+    right: 0;
+    right: -100%;
+    transition: right 0.5s ease-in-out;
     &.open {
-    	left: 0;
-    	transition: all 0.5s ease-in-out;
+    	right: 0;
+    	transition: right 0.3s ease-in-out;
     }
 	}
 
@@ -30,7 +31,8 @@
 		display: block;
 		list-style: none;
 		padding: 0;
-		padding-right: 40px;
+		text-align: center;
+		// padding-right: 40px;
 	}
 
 	&__link {
@@ -47,13 +49,13 @@
 	}
 	&__close {
 		position: absolute;
-		right: 10px;
+		transform: translate(-50%);
 		top: 10px;
 		cursor: pointer;
 	}
 	&__hamburger {
 		position: absolute;
-    left: 30px;
+    right: 10px;
     top: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
@@ -81,6 +83,11 @@
 		&__list-item {
 			display: inline-block;
 			padding: 0;
+			// text-align: left;
+		}
+
+		&__hamburger {
+			display: none;
 		}
 	}
 }

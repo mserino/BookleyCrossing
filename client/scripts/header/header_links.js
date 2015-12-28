@@ -7,9 +7,14 @@ Template.headerLinks.helpers({
 
 Template.headerLinks.events({
 	'click .js-header-close': function(e) {
-		$('.js-header-menu').removeClass('open');
+		closeMenu();
 	},
 	'click .js-header-list-item': function(e) {
-		$('.js-header-menu').removeClass('open');
+		closeMenu();
 	}
 });
+
+var closeMenu = function() {
+	$('.js-header-menu').removeClass('open');
+	$('.js-header-hamburger').removeClass('hidden');
+};
