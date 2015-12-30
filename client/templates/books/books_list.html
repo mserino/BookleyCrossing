@@ -1,7 +1,10 @@
 <template name="booksList">
-	<div class="books">
+	<div class="books-list col-xs-12">
 		{{#each books}}
-			{{> bookItem}}
+			<div class="books-item col-xs-6 col-sm-3">
+				<a href="{{pathFor 'bookPage'}}"><h4>{{title}}</h4></a>
+				<h5>{{author}}</h5>
+			</div>
 		{{/each}}
 	</div>
 </template>

@@ -25,3 +25,7 @@ check
 ostrio:iron-router-title
 twbs:bootstrap
 mrt:flash-messages
+useraccounts:bootstrap
+accounts-password
+useraccounts:iron-routing
+themeteorchef:jquery-validation

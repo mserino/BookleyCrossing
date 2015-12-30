@@ -6,3 +6,8 @@ body {
     background: $main-orange;
     color: $main-white;
 }
+
+.col-centered {
+	float: none;
+	margin: 0 auto;
+}

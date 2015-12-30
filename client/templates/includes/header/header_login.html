@@ -1,0 +1,11 @@
+<template name="headerLogin">
+	<ul class="header-login col-xs-12 list-inline list-unstyled">
+		{{#if currentUser}}
+			<li>Welcome {{currentUser.username}}</li>
+			<li><a href="{{pathFor 'signOut'}}" class="header-login__link">Sign out</a></li>
+		{{else}}
+			<li><a href="{{pathFor 'atSignUp'}}" class="header-login__link">Sign up</a></li>
+			<li><a href="{{pathFor 'atSignIn'}}" class="header-login__link">Sign in</a></li>
+		{{/if}}
+	</ul>
+</template>

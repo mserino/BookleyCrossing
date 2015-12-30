@@ -1,0 +1,36 @@
+.header-login {
+	margin: 0;
+	padding-top: 10px;
+	padding-right: 10px;
+
+	&__link {
+		color: $dark-grey;
+		&:hover {
+			color: darken($dark-grey, 20%);
+		}
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+	.header-login {
+		text-align: right;
+	}
+}
+
+.at-form {
+	.at-btn {
+		background-color: $main-pink;
+		border: 0;
+		color: $main-white;
+		&:hover {
+			background-color: darken($main-pink, 10%);
+			color: $main-white;
+		}
+	}
+	a {
+		color: $main-pink;
+		&:hover {
+			color: darken($main-pink, 20%);
+		}
+	}
+}

@@ -1,0 +1,17 @@
+.book-add {
+	&__title {
+		text-align: center;
+		@include typographyBold;
+	}
+	&__input {
+		&.error {
+			border: 1px solid $main-pink;
+		}
+	}
+	&__controls {
+		.error {
+			margin-top: 5px;
+			color: $main-pink;
+		}
+	}
+}

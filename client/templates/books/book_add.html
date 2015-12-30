@@ -1,17 +1,32 @@
 <template name="bookAdd">
-	<form>
-		<div class="form-group">
-			<label class="control-label" for="title">Title</label>
-			<div class="controls">
-				<input name="title" id="title" type="text" value="" placeholder="Title" class="js-new-book-title form-control"/>
+	<section class="book-add col-xs-12 col-sm-6 col-centered">
+		<h3 class="book-add__title">Add a book</h3>
+		<form class="js-book-add-form">
+			<div class="form-group">
+				<label class="control-label" for="title">Title</label>
+				<div class="controls book-add__controls">
+					<input name="title"
+								 id="title"
+								 type="text"
+								 value=""
+								 placeholder="Title"
+								 class="js-new-book-title form-control book-add__input"
+								 required/>
+				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<label class="control-label" for="author">Author</label>
-			<div class="controls">
-				<input name="author" id="author" type="text" value="" placeholder="Author" class="js-new-book-author form-control"/>
+			<div class="form-group">
+				<label class="control-label" for="author">Author</label>
+				<div class="controls book-add__controls">
+					<input name="author"
+								 id="author"
+								 type="text"
+								 value=""
+								 placeholder="Author"
+								 class="js-new-book-author form-control book-add__input"
+								 required/>
+				</div>
 			</div>
-		</div>
-		<input type="submit" value="Add" class="btn btn-primary"/>
-	</form>
+			<input type="submit" value="Add" class="btn btn-primary btn-pink btn-block btn-lg"/>
+		</form>
+	</section>
 </template>

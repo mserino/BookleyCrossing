@@ -10,7 +10,7 @@ Template.bookAdd.events({
 		//calling method in collections/books.js
 		Meteor.call('bookAdd', book, function(error, result) {
 			if (error)
-				FlashMessages.sendError(error.reason, { autoHide: false, hideDelay: 5000 });
+				FlashMessages.sendError(error.reason, { autoHide: false });
 				Router.go('bookAdd');
 
 			if (result.bookExists)
@@ -22,4 +22,19 @@ Template.bookAdd.events({
 			Router.go('bookPage', {_id: result._id});
 		});
 	}
+});
+
+Template.bookAdd.onRendered(function(){
+    $('.js-book-add-form').validate({
+    	rules: {
+    		title: {
+    			required: true,
+    			minlength: 3
+    		},
+    		author: {
+    			required: true,
+    			minlength: 3
+    		}
+    	}
+    });
 });
