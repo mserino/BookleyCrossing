@@ -4,7 +4,8 @@ Template.bookAdd.events({
 
 		var book = {
 			title: $(e.target).find('.js-new-book-title').val(),
-			author: $(e.target).find('.js-new-book-author').val()
+			author: $(e.target).find('.js-new-book-author').val(),
+			cover: $(e.target).find('.js-new-book-cover').val()
 		};
 
 		//calling method in collections/books.js
@@ -34,6 +35,10 @@ Template.bookAdd.onRendered(function(){
     		author: {
     			required: true,
     			minlength: 3
+    		},
+    		cover: {
+    			required: true,
+    			minlength: 5
     		}
     	}
     });
