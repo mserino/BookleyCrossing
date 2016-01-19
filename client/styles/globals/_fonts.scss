@@ -9,6 +9,8 @@
 // Delius
 @import url(https://fonts.googleapis.com/css?family=Delius);
 
+//Satisfy
+@import url(https://fonts.googleapis.com/css?family=Satisfy);
 
 @mixin fontSansSerif() {
 	font-family: 'Montserrat', sans-serif;
@@ -20,4 +22,8 @@
 
 @mixin fontHandWriting() {
 	font-family: 'Delius', cursive;
+}
+
+@mixin fontSatisfy() {
+	font-family: 'Satisfy', cursive;
 }

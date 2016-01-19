@@ -1,0 +1,14 @@
+<template name="booksListItem">
+	<div class="books-list__item-container col-xs-6 col-sm-4 col-md-3">
+		<div class="books-list__cover">
+			<a href="{{pathFor 'bookPage'}}">
+				<img src="{{cover}}" alt="{{title}} - {{author}}"/>
+			</a>
+		</div>
+		<div class="books-list__item">
+			<a href="{{pathFor 'bookPage'}}" class="books-list__title">
+				{{title}}
+			</a>
+		</div>
+	</div>
+</template>

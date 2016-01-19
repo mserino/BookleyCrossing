@@ -1,4 +1,5 @@
 /* Settings */
+@import 'globals/reset';
 
 /* Globals */
 @import 'globals/colors';
@@ -6,9 +7,12 @@
 @import 'globals/fonts';
 @import 'globals/flash-messages';
 @import 'globals/breakpoints';
+
 // Global body configs
 @import 'layout/main';
 
 /* Components */
 @import 'books/book';
 @import 'books/books-list';
+
+@import 'homepage/homepage';

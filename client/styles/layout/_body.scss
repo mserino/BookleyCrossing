@@ -2,6 +2,11 @@ body {
 	@include fontSansSerif;
 }
 
+.main {
+	margin: 0;
+	padding: 0;
+}
+
 ::selection {
     background: $main-orange;
     color: $main-white;
