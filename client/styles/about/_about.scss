@@ -1,0 +1,13 @@
+.about {
+	// padding: 0 100px;
+	&__heading {
+		text-align: center;
+		margin-bottom: 30px;
+		&--green {
+			color: $main-green;
+		}
+		&--orange {
+			color: $main-orange;
+		}
+	}
+}
