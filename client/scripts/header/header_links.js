@@ -11,10 +11,14 @@ Template.headerLinks.events({
 	},
 	'click .js-header-list-item': function(e) {
 		closeMenu();
+	},
+	'click .js-header-overlay.open': function(e) {
+		closeMenu();
 	}
 });
 
 var closeMenu = function() {
 	$('.js-header-menu').removeClass('open');
 	$('.js-header-hamburger').removeClass('hidden');
+	$('.js-header-overlay').removeClass('open');
 };

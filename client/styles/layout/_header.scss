@@ -7,18 +7,18 @@
 
 	&__list-container {
 		position: fixed;
-    height: 100%;
-    background: rgba(lighten($dark-grey, 30%), 0.8);
-    z-index: 1;
-    padding: 0;
-    margin: 0;
-    width: 15%;
-    right: -100%;
-    transition: right 0.5s ease-in-out;
-    &.open {
-    	right: 0;
-    	transition: right 0.3s ease-in-out;
-    }
+	    height: 100%;
+	    background: lighten($dark-grey, 30%);
+	    z-index: 10;
+	    padding: 0;
+	    margin: 0;
+	    width: 40%;
+	    right: -100%;
+	    transition: right 0.5s ease-in-out;
+	    &.open {
+	    	right: 0;
+	    	transition: right 0.3s ease-in-out;
+	    }
 	}
 
 	&__list {
@@ -38,6 +38,7 @@
 		padding: 10px 20px;
 		color: $dark-grey;
 		display: block;
+		border-bottom: 1px solid lighten($dark-grey, 25%);
 		&:focus, &:hover {
 			text-decoration: none;
 		}
@@ -46,19 +47,38 @@
 			color: $dark-grey;
 		}
 	}
+
 	&__close {
 		position: absolute;
 		transform: translate(-50%);
 		top: 10px;
+		right: 10px;
 		cursor: pointer;
 	}
+
 	&__hamburger {
 		position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    color: $main-pink;
+	    right: 10px;
+	    top: 50%;
+	    transform: translate(-50%, -50%);
+	    cursor: pointer;
+	    color: $main-pink;
+	}
+
+	&__icon-link {
+		font-size: 1.5em;
+	}
+
+	&__overlay {
+		&.open {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 9;
+			background-color: rgba($dark-grey, 0.5);
+		}
 	}
 }
 
@@ -82,11 +102,19 @@
 		&__list-item {
 			display: inline-block;
 			padding: 0;
-			// text-align: left;
+			margin-bottom: 0;
 		}
 
 		&__hamburger {
 			display: none;
+		}
+
+		&__icon-link {
+			font-size: 1em;
+		}
+
+		&__link {
+			border-bottom: 0;
 		}
 	}
 }
