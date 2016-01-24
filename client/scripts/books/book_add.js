@@ -18,7 +18,7 @@ Template.bookAdd.events({
 				FlashMessages.sendWarning('This book has already been posted', { autoHide: true, hideDelay: 5000 });
 
 			if (!result.bookExists)
-				FlashMessages.sendSuccess('Book successfully added to the bookshelf', {autoHide: false, hideDelay: 5000 });
+				FlashMessages.sendSuccess('Book successfully added to the bookshelf', {autoHide: true, hideDelay: 5000 });
 
 			Router.go('bookPage', {_id: result._id});
 		});

@@ -80,6 +80,9 @@
 			background-color: rgba($dark-grey, 0.5);
 		}
 	}
+	&__notifications {
+		min-height: 0;
+	}
 }
 
 @media (min-width: $screen-md-min) {
