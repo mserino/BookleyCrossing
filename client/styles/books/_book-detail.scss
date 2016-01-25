@@ -1,0 +1,22 @@
+.book-detail {
+	padding: 20px 10px;
+  float: none;
+  margin: 0 auto;
+	&__image {
+		height: 400px;
+		text-align: center;
+		padding: 10px;
+		img {
+			height: 100%;
+			border-radius: 10px;
+		}
+	}
+	&__title {
+		margin: 0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	&__synopsis {
+		padding-top: 20px;
+	}
+}

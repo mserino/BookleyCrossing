@@ -1,11 +1,2 @@
 @import 'book-add';
-
-.book {
-	padding: 20px;
-	&__item {
-		background-color: $main-pink;
-		color: white;
-		@include typographyBold;
-		@include fontSerif;
-	}
-}
+@import 'book-detail';
