@@ -9,13 +9,6 @@ AccountsTemplates.addFields([
         displayName: 'Username',
         required: true
     },
-    {
-        _id: "username_and_email",
-        type: "text",
-        displayName: "usernameOrEmail",
-        placeholder: "usernameOrEmail",
-        required: true,
-    },
     pwd
 ]);
 
