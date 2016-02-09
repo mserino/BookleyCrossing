@@ -27,5 +27,11 @@ Template.bookItem.events({
 			if (result.userNotLoggedIn)
 				FlashMessages.sendError('You need to be logged in to borrow a book', { autoHide: true, hideDelay: 5000 });
 		});
+	},
+	'click .js-return-book': function(e) {
+		e.preventDefault();
+		var book = Books.findOne({_id: this._id});
+
+		Meteor.call('returnBook', book);
 	}
 });
