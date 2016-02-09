@@ -7,6 +7,15 @@
 			<h1 class="book-detail__title">{{title}}</h1>
 			<p class="book-detail__author">{{author}}</p>
 			<p class="book-detail__addedby">Added by {{addedBy.username}} on {{submitted}}</p>
+
+			{{#if borrowed}}
+				{{#if isBorrowing}}
+					<p class="book-detail__borrowing">You are currently reading this book</p>
+				{{else}}
+					<p class="book-detail__borrowedby">This book is currently being read by <span class="book-detail__borrowedby--username">{{borrowedBy.username}}</span></p>
+				{{/if}}
+			{{/if}}
+
 			<p class="book-detail__synopsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -14,6 +23,17 @@
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
-		<button class="js-borrow-book">Borrow this book</button>
+		<div class="col-xs-12 col-md-6 book-detail__button-container">
+			{{#if borrowed}}
+				{{#if isBorrowing}}
+					<button class="col-xs-12 book-detail__button book-detail__button--return btn btn-large js-return-book">Return this book</button>
+				{{else}}
+					<button class="col-xs-12 book-detail__button book-detail__button--unavailable btn btn-large js-return-book">Book unavailable</button>
+				{{/if}}
+			{{else}}
+				<button class="col-xs-12 book-detail__button book-detail__button--borrow btn btn-large js-borrow-book">Borrow me!</button>
+			{{/if}}
+
+		</div>
 	</section>
 </template>
