@@ -10,7 +10,7 @@
 
 			{{#if borrowed}}
 				{{#if isBorrowing}}
-					<p class="book-detail__borrowing">You are currently reading this book</p>
+					<p class="book-detail__borrowing">You are reading this book since {{borrowedOn}}</p>
 				{{else}}
 					<p class="book-detail__borrowedby">
 						<span class="book-detail__borrowedby--username">{{borrowedBy.username}}</span>
@@ -27,6 +27,7 @@
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
 		<div class="col-xs-12 col-md-6 book-detail__button-container">
+			<div class="book-detail__errors js-borrow-errors"></div>
 			{{#if borrowed}}
 				{{#if isBorrowing}}
 					<button class="col-xs-12 book-detail__button book-detail__button--return btn btn-large js-return-book">Return this book</button>
