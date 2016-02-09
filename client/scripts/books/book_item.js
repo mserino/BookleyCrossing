@@ -40,7 +40,7 @@ Template.bookItem.events({
 			if (result.userAlreadyBorrowing) {
 				$('.js-borrow-errors').text('Oops! You can\'t borrow more than one book at the time. Please return the book you\'re reading before borrowing a new one.');
 				FlashMessages.sendError('It looks like you are already borrowing a book. Please return it before borrowing a new one', { autoHide: true, hideDelay: 5000 });
-			} else {
+			} else if (!result.userAlreadyBorrowing && !result.userNotLoggedIn) {
 				FlashMessages.sendSuccess('Book successfully borrowed!', {autoHide: true, hideDelay: 5000});
 			}
 		});
