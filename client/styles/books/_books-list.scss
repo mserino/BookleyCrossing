@@ -1,10 +1,11 @@
 .books-list {
 	margin: 0;
-	padding: 20px 30px;
+	padding: 40px 30px;
 
 	&__item-container {
 		margin: 0;
 		padding: 0;
+		position: relative;
 	}
 	&__item {
 		text-align: center;
@@ -15,7 +16,7 @@
 		height: 260px;
 		overflow: hidden;
 		text-align: center;
-		img {
+		&-image {
 			height: 100%;
 			width: 160px;
 			border-radius: 20px;
@@ -27,16 +28,26 @@
 			color: darken($main-orange, 20%);
 		}
 	}
+	&__status {
+		width: 60px;
+		right: 0;
+		top: -20px;
+		position: absolute;
+	}
 }
 
 @media (min-width: $screen-sm-min) {
 	.books-list {
 		&__cover {
 			height: 300px;
-			img {
+			&-image {
 				height: 100%;
 				width: 200px;
 			}
+		}
+		&__status {
+			right: 5%;
+			width: 70px;
 		}
 	}
 }

@@ -8,7 +8,8 @@
 	&__list-container {
 		position: fixed;
 	    height: 100%;
-	    background: lighten($dark-grey, 30%);
+	    border-left: lighten($dark-grey, 30%);
+	    background: white;
 	    z-index: 10;
 	    padding: 0;
 	    margin: 0;
@@ -38,13 +39,13 @@
 		padding: 10px 20px;
 		color: $dark-grey;
 		display: block;
-		border-bottom: 1px solid lighten($dark-grey, 25%);
+		border-bottom: 1px solid lighten($dark-grey, 50%);
 		&:focus, &:hover {
 			text-decoration: none;
 		}
 		&:hover, &.selected {
-			background-color: $light-grey;
-			color: $dark-grey;
+			background-color: lighten($main-orange, 30%);
+			color: $main-orange;
 		}
 	}
 
@@ -118,7 +119,12 @@
 		}
 
 		&__link {
-			border-bottom: 0;
+			border-bottom: 2px solid white;
+			&:hover, &.selected {
+				background-color: transparent;
+				border-bottom: 2px solid $main-orange;
+				color: $main-orange;
+			}
 		}
 	}
 }
