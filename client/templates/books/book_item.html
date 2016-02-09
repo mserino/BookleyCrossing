@@ -12,7 +12,10 @@
 				{{#if isBorrowing}}
 					<p class="book-detail__borrowing">You are currently reading this book</p>
 				{{else}}
-					<p class="book-detail__borrowedby">This book is currently being read by <span class="book-detail__borrowedby--username">{{borrowedBy.username}}</span></p>
+					<p class="book-detail__borrowedby">
+						<span class="book-detail__borrowedby--username">{{borrowedBy.username}}</span>
+						is reading this book since {{borrowedOn}}
+					</p>
 				{{/if}}
 			{{/if}}
 
