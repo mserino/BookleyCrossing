@@ -3,7 +3,7 @@
   float: none;
   margin: 0 auto;
 	&__image {
-		height: 400px;
+		height: 500px;
 		text-align: center;
 		padding: 10px;
 		img {
@@ -18,5 +18,44 @@
 	}
 	&__synopsis {
 		padding-top: 20px;
+	}
+	&__borrowedby {
+		color: $main-pink;
+		&--username {
+			@include typographyBold;
+		}
+	}
+	&__borrowing {
+		color: $main-orange;
+	}
+	&__button-container {
+		padding: 40px 10px;
+		text-align: center;
+	}
+	&__button {
+		color: $main-white;
+		@include fontHandWriting;
+		font-size: 2rem;
+
+		&:hover, &:focus {
+			color: $main-white;
+		}
+
+		&--borrow {
+			background-color: $main-pink;
+			&:hover, &:focus {
+				background-color: darken($main-pink, 10%);
+			}
+		}
+		&--unavailable {
+			background-color: $light-grey;
+			pointer-events: none;
+		}
+		&--return {
+			background-color: $main-orange;
+			&:hover, &:focus {
+				background-color: darken($main-orange, 10%);
+			}
+		}
 	}
 }
