@@ -7,10 +7,17 @@ Template.bookItem.helpers({
 			return this.borrowedBy.username;
 		}
 	},
+	borrowedOn: function() {
+		return this.borrowedOn.toDateString();
+	},
 	isBorrowing: function() {
 		if(this.borrowedBy.username) {
 			var borrowedBy = this.borrowedBy.username,
+				currentUser;
+
+			if(Meteor.user()) {
 				currentUser = Meteor.user().username;
+			}
 
 			return borrowedBy === currentUser;
 		}
