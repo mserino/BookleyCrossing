@@ -46,8 +46,24 @@
 			}
 		}
 		&__status {
-			right: 5%;
+			right: 0;
 			width: 70px;
+		}
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.books-list {
+		&__status {
+			right: 10px;
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.books-list {
+		&__status {
+			right: 20px;
 		}
 	}
 }

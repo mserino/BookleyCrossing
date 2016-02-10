@@ -16,3 +16,23 @@ body {
 	float: none;
 	margin: 0 auto;
 }
+
+.container-section {
+	max-width: 500px;
+	left: 50%;
+		-webkit-transform: translateX(-50%);
+		    -ms-transform: translateX(-50%);
+		        transform: translateX(-50%);
+}
+
+@media (min-width: $screen-md-min) {
+	.container-section {
+		max-width: 934px;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.container-section {
+		max-width: 1353px;
+	}
+}
