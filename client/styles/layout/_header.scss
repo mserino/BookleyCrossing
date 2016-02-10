@@ -39,7 +39,7 @@
 		padding: 10px 20px;
 		color: $dark-grey;
 		display: block;
-		border-bottom: 1px solid lighten($dark-grey, 50%);
+		border-bottom: 1px solid lighten($dark-grey, 65%);
 		&:focus, &:hover {
 			text-decoration: none;
 		}
@@ -123,7 +123,7 @@
 			&:hover, &.selected {
 				background-color: transparent;
 				border-bottom: 2px solid $main-orange;
-				color: $main-orange;
+				color: darken($main-orange, 10%);
 			}
 		}
 	}
