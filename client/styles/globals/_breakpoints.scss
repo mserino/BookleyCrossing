@@ -1,5 +1,35 @@
 /* Breakpoints */
-$screen-xs-min: 300px;
-$screen-sm-min: 480px;
-$screen-md-min: 768px;
-$screen-lg-min: 992px;
+
+/// Mobile screen size, in pixels
+///
+/// @type Number (pixels)
+$screen-xs: 240px; //Mobile upto 640px
+
+/// Tablet screen size, in pixels
+///
+/// @type Number (pixels)
+$screen-sm: 641px; //Tablet upto 768px
+
+/// Desktop screen size, in pixels
+///
+/// @type Number (pixels)
+$screen-md: 769px; //Desktop uptp 1024px
+
+/// Wide screen size, in pixels
+///
+/// @type Number (pixels)
+$screen-lg: 1025px; //Wide upto 1500px
+
+// The following are required by bootstrap and should not be modified
+$screen-xs-min: $screen-xs;
+$screen-phone: $screen-xs-min;
+$screen-sm-min: $screen-sm;
+$screen-tablet: $screen-sm-min;
+$screen-md-min: $screen-md;
+$screen-desktop: $screen-md-min;
+$screen-lg-min: $screen-lg;
+$screen-lg-desktop: $screen-lg-min;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+$grid-float-breakpoint: $screen-md-min;
