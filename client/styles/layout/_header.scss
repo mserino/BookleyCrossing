@@ -7,13 +7,13 @@
 
 	&__list-container {
 		position: fixed;
-	    height: 100%;
+	    height: auto;
 	    border-left: lighten($dark-grey, 30%);
 	    background: white;
 	    z-index: 10;
 	    padding: 0;
 	    margin: 0;
-	    width: 40%;
+	    width: 100%;
 	    right: -100%;
 	    transition: right 0.5s ease-in-out;
 	    &.open {
@@ -26,6 +26,7 @@
 		padding: 0;
 		margin: 0;
 		padding-top: 35px;
+		text-align: center;
 	}
 
 	&__list-item {
