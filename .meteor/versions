@@ -1,5 +1,6 @@
 accounts-base@1.2.2
 accounts-password@1.1.4
+amplify@1.0.0
 autoupdate@1.2.4
 babel-compiler@5.8.24_1
 babel-runtime@0.1.4
@@ -46,6 +47,7 @@ iron:router@1.0.12
 iron:url@1.0.11
 jquery@1.11.4
 launch-screen@1.0.4
+less@2.5.1
 livedata@1.0.15
 localstorage@1.0.5
 logging@1.0.8
@@ -65,6 +67,9 @@ observe-sequence@1.0.7
 ordered-dict@1.0.4
 ostrio:iron-router-helper-class@1.0.0
 ostrio:iron-router-title@1.0.2
+package-version-parser@3.0.4
+practicalmeteor:chai@2.1.0_1
+practicalmeteor:loglevel@1.2.0_2
 promise@0.5.1
 random@1.0.5
 rate-limit@1.0.0
@@ -74,6 +79,11 @@ reload@1.1.4
 retry@1.0.4
 routepolicy@1.0.6
 sacha:spin@2.3.1
+sanjo:jasmine@0.21.0
+sanjo:karma@3.1.1
+sanjo:long-running-child-process@1.1.5
+sanjo:meteor-files-helpers@1.2.0_1
+sanjo:meteor-version@1.0.0
 service-configuration@1.0.5
 session@1.1.1
 sha@1.0.4
@@ -93,5 +103,11 @@ url@1.0.5
 useraccounts:bootstrap@1.13.1
 useraccounts:core@1.13.1
 useraccounts:iron-routing@1.13.1
+velocity:chokidar@1.2.0_1
+velocity:core@0.10.10
+velocity:html-reporter@0.9.1
+velocity:meteor-internals@1.1.0_7
+velocity:meteor-stubs@1.1.1
+velocity:shim@0.1.0
 webapp@1.2.3
 webapp-hashing@1.0.5

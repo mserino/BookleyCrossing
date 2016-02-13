@@ -29,3 +29,5 @@ useraccounts:bootstrap
 accounts-password
 useraccounts:iron-routing
 themeteorchef:jquery-validation
+sanjo:jasmine
+velocity:html-reporter
