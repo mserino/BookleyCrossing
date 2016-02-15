@@ -23,7 +23,6 @@ if(Meteor.isClient) {
 		if (timeDiff < 10) {
 			return true;
 		}
-
 		return false;
 	};
 }
