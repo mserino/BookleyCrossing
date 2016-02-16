@@ -5,12 +5,14 @@
 		{{/if}}
 		<div class="books-list__cover">
 			<div class="books-list__cover-container">
-				<a href="{{pathFor 'bookPage'}}">
+				<a href="{{pathFor 'bookPage'}}" class="books-list__path">
 					<img src="{{cover}}" alt="{{title}} - {{author}}" class="books-list__cover-image"/>
 				</a>
 			</div>
 			<div class="books-list__description-container">
-				<p class="books-list__description-container-text">{{description}}</p>
+				<a href="{{pathFor 'bookPage'}}" class="books-list__path">
+					<p class="books-list__description-container-text">{{ text description}}</p>
+				</a>
 			</div>
 		</div>
 		<div class="books-list__item">
