@@ -1,0 +1,38 @@
+<template name="dashboard">
+	<section class="dashboard container-section col-xs-12">
+		<h3>{{currentUser.username}}'s Dashboard</h3>
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active">
+				<a href="#yourbooks" aria-controls="yourbooks" role="tab" data-toggle="tab">Your Books</a>
+			</li>
+			<li role="presentation">
+				<a href="#wishlist" aria-controls="wishlist" role="tab" data-toggle="tab">Your Wishlist</a>
+			</li>
+			<li role="presentation">
+				<a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a>
+			</li>
+			{{#if isInRole 'admin'}}
+				<li role="manage">
+					<a href="#manage" aria-controls="manage" role="tab" data-toggle="tab">Manage</a>
+				</li>
+			{{/if}}
+		</ul>
+		<div class="tab-content dashboard__content">
+			<div role="tabpanel" class="tab-pane active" id="yourbooks">
+				{{> dashboardYourBooks}}
+			</div>
+			<div role="tabpanel" class="tab-pane" id="wishlist">
+				{{> dashboardWishlist}}
+			</div>
+			<div role="tabpanel" class="tab-pane" id="settings">
+				{{> dashboardSettings}}
+			</div>
+			{{#if isInRole 'admin'}}
+				<div role="tabpanel" class="tab-pane" id="manage">
+					{{> dashboardManage}}
+				</div>
+			{{/if}}
+		</div>
+	</section>
+	{{> latestAdditions}}
+</template>

@@ -1,0 +1,12 @@
+.dashboard {
+	padding: 20px;
+	&__tabs {
+		background-color: lighten($light-grey, 10%);
+		border: 1px solid $light-grey;
+	}
+	&__content {
+		border: 1px solid $light-grey;
+		border-top: 0;
+		padding: 20px;
+	}
+}

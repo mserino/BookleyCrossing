@@ -1,21 +1,4 @@
 <template name="homepage">
-	<section class="homepage-banner col-xs-12">
-		<div class="homepage-banner__title">
-			Share your books
-		</div>
-		<div class="homepage-banner__copy">
-			A place to exchange the books we loved
-		</div>
-		<div class="homepage-banner__location">
-			Buckley Building, Deloitte Digital
-		</div>
-	</section>
-	<section class="homepage-latest container-section col-xs-12">
-		<div class="homepage-latest__title">
-			<h2>Latest additions <a class="homepage-latest__link" href="{{pathFor 'booksList'}}">View all books</a></h2>
-		</div>
-		{{#each books}}
-			{{> booksListItem}}
-		{{/each}}
-	</section>
+	{{> homepageBanner}}
+	{{> latestAdditions}}
 </template>

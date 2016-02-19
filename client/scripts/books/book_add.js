@@ -8,7 +8,6 @@ Template.bookAdd.events({
 			cover: $(e.target).find('.js-new-book-cover').val()
 		};
 
-		//calling method in collections/books.js
 		Meteor.call('bookAdd', book, function(error, result) {
 			if (error) {
 				FlashMessages.sendError(error.reason, { autoHide: false });
