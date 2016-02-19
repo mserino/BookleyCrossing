@@ -1,0 +1,10 @@
+<template name="latestAdditions">
+	<section class="homepage-latest container-section col-xs-12">
+		<div class="homepage-latest__title">
+			<h2>Latest additions <a class="homepage-latest__link" href="{{pathFor 'booksList'}}">View all books</a></h2>
+		</div>
+		{{#each books}}
+			{{> booksListItem}}
+		{{/each}}
+	</section>
+</template>

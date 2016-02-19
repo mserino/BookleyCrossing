@@ -27,15 +27,19 @@
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
 		<div class="col-xs-12 col-sm-6 book-detail__button-container">
-			<div class="book-detail__errors js-borrow-errors"></div>
+			<div class="book-detail__errors js-borrow-notifications"></div>
 			{{#if borrowed}}
 				{{#if isBorrowing}}
 					<button class="col-xs-12 book-detail__button book-detail__button--return btn btn-large js-return-book">Return this book</button>
 				{{else}}
-					<button class="col-xs-12 book-detail__button book-detail__button--unavailable btn btn-large js-return-book">Book unavailable</button>
+					<button class="col-xs-12 book-detail__button book-detail__button--unavailable btn btn-large">Book unavailable</button>
 				{{/if}}
 			{{else}}
-				<button class="col-xs-12 book-detail__button book-detail__button--borrow btn btn-large js-borrow-book">Borrow me!</button>
+				{{#if requested}}
+					<button class="col-xs-12 book-detail__button book-detail__button--unavailable btn btn-large">Come collect!</button>
+				{{else}}
+					<button class="col-xs-12 book-detail__button book-detail__button--borrow btn btn-large js-borrow-book">Request this book</button>
+				{{/if}}
 			{{/if}}
 
 		</div>

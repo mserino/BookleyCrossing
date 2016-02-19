@@ -8,6 +8,17 @@ if (Meteor.users.find().count() === 0) {
         password: 'testtest',
         borrowing: booktest
     });
+
+    Accounts.createUser({
+    	username: 'admin',
+    	email: 'admin@bookleycrossing.com',
+    	password: 'admintest',
+    	borrowing: ''
+    });
+    var adminId = Meteor.users.findOne({username: 'admin'})._id;
+    var testId = Meteor.users.findOne({username: 'test'})._id;
+    Roles.addUsersToRoles(adminId, ['admin', 'user']);
+    Roles.addUsersToRoles(testId, ['user']);
 }
 
 if (Books.find().count() === 0) {
