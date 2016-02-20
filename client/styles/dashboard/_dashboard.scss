@@ -1,12 +1,35 @@
+@import 'dashboard-request';
+
 .dashboard {
 	padding: 20px;
 	&__tabs {
 		background-color: lighten($light-grey, 10%);
-		border: 1px solid $light-grey;
 	}
 	&__content {
-		border: 1px solid $light-grey;
-		border-top: 0;
+		border-radius: 4px 4px 0 0;
+	}
+	.nav-tabs {
+		border: 0;
+		& > li {
+			margin-bottom: 0;
+		}
+		& > li > a {
+			border: 0;
+			color: $dark-grey;
+			&:hover, &:focus, &:active {
+				border: 0;
+				color: $main-pink;
+			}
+		}
+		& > li.active > a {
+			color: $main-white;
+			background-color: lighten($main-pink, 10%);
+		}
+	}
+
+	&__tab-body {
 		padding: 20px;
+		background-color: $main-pink;
+		background-image: linear-gradient(lighten($main-pink, 10%), $main-pink);
 	}
 }

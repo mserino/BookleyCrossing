@@ -10,7 +10,19 @@
 		}
 	}
 
+	&-green {
+		background-color: $main-green;
+		&:hover, &:active, &:focus {
+			background-color: darken($main-green, 10%) !important;
+			// !important to override bootstrap styles
+		}	
+	}
+
 	&-large {
 		min-width: 200px;
+	}
+
+	&-small {
+		font-size: 10px;
 	}
 }

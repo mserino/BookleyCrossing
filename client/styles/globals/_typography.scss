@@ -3,3 +3,7 @@
 @mixin typographyBold() {
 	font-weight: bold;
 }
+
+@mixin typographyItalic() {
+	font-style: italic;
+}
