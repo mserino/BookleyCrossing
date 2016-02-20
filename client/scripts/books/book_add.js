@@ -8,7 +8,7 @@ Template.bookAdd.events({
 			cover: $(e.target).find('.js-new-book-cover').val()
 		};
 
-		Meteor.call('bookAdd', book, function(error, result) {
+		Meteor.call('addBook', book, function(error, result) {
 			if (error) {
 				FlashMessages.sendError(error.reason, { autoHide: false });
 				Router.go('bookAdd');

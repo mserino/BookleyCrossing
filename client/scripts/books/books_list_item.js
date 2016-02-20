@@ -5,6 +5,9 @@ Template.booksListItem.helpers({
 		if (isNew(this.submitted)) {
 			status = 'new';
 		}
+		if (this.requestedBy) {
+			status = 'requested';
+		}
 		if (this.borrowedBy) {
 			status = 'borrowed';
 		}
