@@ -1,21 +1,34 @@
 <template name="dashboardManage">
-	<div class="dashboard-manage">
+	<div class="dashboard-manage row">
 		<h3>Manage</h3>
-		<h4>
-			{{#if notEmpty}}
-				<div class="notification-pulse"></div>
-			{{/if}}
-			Pending requests
-		</h4>
-		<ul class="dashboard-request__list">
-			{{#if notEmpty}}
-					{{#each requests}}
-						{{> dashboardRequest}}
+		<div class="dashboard-manage__section col-xs-12 col-sm-6">
+			<h4>
+				{{#if requestsNotEmpty}}
+					<div class="notification-pulse"></div>
+				{{/if}}
+				Pending requests
+			</h4>
+			<ul class="dashboard-request__list">
+				{{#if requestsNotEmpty}}
+						{{#each requests}}
+							{{> dashboardRequest}}
+						{{/each}}
+				{{else}}
+					No pending requests
+				{{/if}}
+			</ul>
+		</div>
+
+		<div class="dashboard-user-reading col-xs-12 col-sm-6">
+			<div class="dashboard-manage__section">
+				<h4>Users are reading</h4>
+				<ul class="dashboard-request__list">
+					{{#each books}}
+						{{> dashboardBook}}
 					{{/each}}
-			{{else}}
-				No pending requests
-			{{/if}}
-		</ul>
+				</ul>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -25,4 +38,13 @@
 		<button class="btn btn-small btn-green js-dashboard-request-approve">Approve</button>
 		<button class="btn btn-small btn-pink js-dashboard-request-decline">Decline</button>
 	</li>
+</template>
+
+<template name="dashboardBook">
+	{{#if borrowed}}
+		<li class="dashboard-request__item">
+		<span class="dashboard-request__username">{{borrowedBy.username}}</span> is reading <span class="dashboard-request__title">{{title}}</span>
+		<button class="btn btn-small btn-pink js-dashboard-force-return">Force Return</button>
+		</li>
+	{{/if}}
 </template>

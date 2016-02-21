@@ -3,19 +3,32 @@
 	font-size: 16px;
 
 	&-pink {
+		// !importants to override bootstrap styles
 		background-color: $main-pink;
-		&:hover, &:active, &:focus {
+		&:hover, &:focus{
 			background-color: darken($main-pink, 10%) !important;
 			// !important to override bootstrap styles
+		}
+		&:active {
+			background-color: darken($main-pink, 30%) !important;
+		}
+		&:focus {
+			background-color: $main-pink !important;
 		}
 	}
 
 	&-green {
+		// !importants to override bootstrap styles
 		background-color: $main-green;
-		&:hover, &:active, &:focus {
+		&:hover {
 			background-color: darken($main-green, 10%) !important;
-			// !important to override bootstrap styles
-		}	
+		}
+		&:active {
+			background-color: darken($main-green, 30%) !important;
+		}
+		&:focus {
+			background-color: $main-green !important;
+		}
 	}
 
 	&-large {
@@ -24,5 +37,9 @@
 
 	&-small {
 		font-size: 10px;
+	}
+	&:hover, &:active, &:focus {
+		outline: none !important;
+		color: $main-white;
 	}
 }
