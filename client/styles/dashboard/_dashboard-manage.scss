@@ -1,0 +1,10 @@
+.dashboard-manage {
+	margin: 0;
+	color: $main-white;
+
+	&__section {
+		background-color: darken($main-pink, 20%);
+		padding: 10px 20px;
+		color: white;
+	}
+}

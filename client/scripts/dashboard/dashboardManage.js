@@ -1,12 +1,16 @@
 if (Meteor.isClient) {
 	Meteor.subscribe('requests');
+	Meteor.subscribe('books');
 
 	Template.dashboardManage.helpers({
 		requests: function() {
 			return Requests.find({});
 		},
-		notEmpty: function() {
+		requestsNotEmpty: function() {
 			return Requests.find({}).count() > 0;
+		},
+		books: function() {
+			return Books.find({});
 		}
 	});
 
@@ -21,6 +25,21 @@ if (Meteor.isClient) {
 			Meteor.call('borrowBook', book, user, request, function(error, result) {
 				$('.js-dashboard-request').text('Request approved').addClass('approved');
 			});
+		}
+	});
+
+	Template.dashboardBook.helpers({
+		borrowed: function() {
+			return this.borrowedBy !== '';
+		}
+	});
+
+	Template.dashboardBook.events({
+		'click .js-dashboard-force-return': function(e) {
+			e.preventDefault();
+			var book = Books.findOne({_id: this._id});
+
+			Meteor.call('returnBook', book);
 		}
 	});
 }

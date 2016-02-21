@@ -30,7 +30,6 @@
 
 	&__tab-body {
 		padding: 20px;
-		background-color: $main-pink;
-		background-image: linear-gradient(lighten($main-pink, 10%), $main-pink);
+		background-color: lighten($main-pink, 10%);
 	}
 }
