@@ -1,17 +1,26 @@
 <template name="dashboardManage">
 	<div class="dashboard-manage">
 		<h3>Manage</h3>
-		<h4>Pending requests</h4>
+		<h4>
+			{{#if notEmpty}}
+				<div class="notification-pulse"></div>
+			{{/if}}
+			Pending requests
+		</h4>
 		<ul class="dashboard-request__list">
-			{{#each requests}}
-				{{> request}}
-			{{/each}}
+			{{#if notEmpty}}
+					{{#each requests}}
+						{{> dashboardRequest}}
+					{{/each}}
+			{{else}}
+				No pending requests
+			{{/if}}
 		</ul>
 	</div>
 </template>
 
-<template name="request">
-	<li class="dashboard-request__item">
+<template name="dashboardRequest">
+	<li class="dashboard-request__item js-dashboard-request">
 		<span class="dashboard-request__username">{{user.username}}</span> wants to read <span class="dashboard-request__title">{{book.title}}</span>
 		<button class="btn btn-small btn-green js-dashboard-request-approve">Approve</button>
 		<button class="btn btn-small btn-pink js-dashboard-request-decline">Decline</button>

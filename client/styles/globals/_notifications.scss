@@ -17,3 +17,19 @@
 		border-color: lighten($main-pink, 25%);
 	}
 }
+
+.notification-pulse {
+	display: inline-block;
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: $main-orange;
+  }
+}

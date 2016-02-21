@@ -8,6 +8,9 @@
 	}
 	&__item {
 		margin-bottom: 10px;
+		&.approved {
+			color: darken($main-green, 20%);
+		}
 	}
 	&__username {
 		@include typographyBold;
@@ -15,4 +18,5 @@
 	&__title {
 		@include typographyItalic;
 	}
+
 }
