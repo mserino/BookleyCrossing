@@ -31,6 +31,9 @@ if (Meteor.isClient) {
 	Template.dashboardBook.helpers({
 		borrowed: function() {
 			return this.borrowedBy !== '';
+		},
+		borrowedOn: function() {
+			return this.borrowedOn.toDateString();
 		}
 	});
 
