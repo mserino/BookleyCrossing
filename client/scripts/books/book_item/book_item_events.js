@@ -16,7 +16,7 @@ Template.bookItem.events({
 				FlashMessages.sendError('It looks like you are already borrowing or requesting a book. Please return it before borrowing a new one', { autoHide: true, hideDelay: 5000 });
 			} else {
 				$('.js-borrow-notifications').text('Thank you for requesting this book. Come collect it from the library.');
-				FlashMessages.sendSuccess('Thank you, your request has been sent', {autoHide: false, hideDelay: 5000})
+				FlashMessages.sendSuccess('Thank you, your request has been sent', {autoHide: true, hideDelay: 5000})
 			}
 		});
 	},
