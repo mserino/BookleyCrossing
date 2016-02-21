@@ -1,8 +1,30 @@
-@import 'dashboard-request';
-@import 'dashboard-manage';
-
 .dashboard {
 	padding: 20px;
+	color: $main-white;
+	&__section {
+		background-color: darken($main-pink, 20%);
+		padding: 10px 20px;
+		color: white;
+	}
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	&__item {
+		margin-bottom: 10px;
+	}
+	&__username {
+		@include typographyBold;
+	}
+	&__title {
+		@include typographyItalic;
+	}
+	&__tab {
+	
+		margin: 0;
+		color: $main-white;
+	}
 	&__tabs {
 		background-color: lighten($light-grey, 10%);
 	}

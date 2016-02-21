@@ -1,14 +1,14 @@
 <template name="dashboardManage">
-	<div class="dashboard-manage row">
+	<div class="dashboard-manage dashboard__tab row">
 		<h3>Manage</h3>
-		<div class="dashboard-manage__section col-xs-12 col-sm-6">
+		<div class="dashboard__section col-xs-12 col-sm-6">
 			<h4>
 				{{#if requestsNotEmpty}}
 					<div class="notification-pulse"></div>
 				{{/if}}
 				Pending requests
 			</h4>
-			<ul class="dashboard-request__list">
+			<ul class="dashboard__list">
 				{{#if requestsNotEmpty}}
 						{{#each requests}}
 							{{> dashboardRequest}}
@@ -20,9 +20,9 @@
 		</div>
 
 		<div class="dashboard-user-reading col-xs-12 col-sm-6">
-			<div class="dashboard-manage__section">
+			<div class="dashboard__section">
 				<h4>Users are reading</h4>
-				<ul class="dashboard-request__list">
+				<ul class="dashboard__list">
 					{{#each books}}
 						{{> dashboardBook}}
 					{{/each}}
@@ -33,8 +33,8 @@
 </template>
 
 <template name="dashboardRequest">
-	<li class="dashboard-request__item js-dashboard-request">
-		<span class="dashboard-request__username">{{user.username}}</span> wants to read <span class="dashboard-request__title">{{book.title}}</span>
+	<li class="dashboard__item js-dashboard-request">
+		<span class="dashboard__username">{{user.username}}</span> wants to read <span class="dashboard__title">{{book.title}}</span>
 		<button class="btn btn-small btn-green js-dashboard-request-approve">Approve</button>
 		<button class="btn btn-small btn-pink js-dashboard-request-decline">Decline</button>
 	</li>
@@ -42,8 +42,8 @@
 
 <template name="dashboardBook">
 	{{#if borrowed}}
-		<li class="dashboard-request__item">
-		<span class="dashboard-request__username">{{borrowedBy.username}}</span> is reading <span class="dashboard-request__title">{{title}}</span>
+		<li class="dashboard__item">
+		<span class="dashboard__username">{{borrowedBy.username}}</span> is reading <span class="dashboard__title">{{title}}</span> since {{borrowedOn}}
 		<button class="btn btn-small btn-pink js-dashboard-force-return">Force Return</button>
 		</li>
 	{{/if}}
