@@ -9,11 +9,11 @@
 					<img src="{{cover}}" alt="{{title}} - {{author}}" class="books-list__cover-image"/>
 				</a>
 			</div>
-			<div class="books-list__description-container">
-				<a href="{{pathFor 'bookPage'}}" class="books-list__path">
-					<p class="books-list__description-container-text">{{ text description}}</p>
-				</a>
-			</div>
+			<a href="{{pathFor 'bookPage'}}" class="books-list__path">
+				<div class="books-list__description-container">
+						<p class="books-list__description-container-text">{{ trim description 0 200}}</p>
+				</div>
+			</a>
 		</div>
 		<div class="books-list__item">
 			<a href="{{pathFor 'bookPage'}}" class="books-list__title">
