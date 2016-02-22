@@ -20,7 +20,7 @@ Template.bookItem.events({
 			}
 		});
 	},
-	
+
 	'click .js-return-book': function(e) {
 		e.preventDefault();
 		var book = Books.findOne({_id: this._id});
