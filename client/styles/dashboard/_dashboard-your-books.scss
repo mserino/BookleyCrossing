@@ -1,0 +1,23 @@
+.dashboard-your-books {
+	&__cover {
+		height: 200px;
+		margin-bottom: 10px;
+	}
+	&__book {
+		background-color: darken($main-pink, 30%);
+		padding: 15px;
+		text-align: center;
+		a {
+			color: $main-white;
+			&:hover, &:focus, &:active {
+				color: $main-pink;
+			}
+		}
+	}
+	&__text {
+		display: block;
+	}
+	.btn {
+		margin-top: 10px;
+	}
+}

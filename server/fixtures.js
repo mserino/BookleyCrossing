@@ -1,12 +1,10 @@
 
 if (Meteor.users.find().count() === 0) {
-	var booktest = Books.findOne({title: 'A thousand splendid suns'});
-
     Accounts.createUser({
         username: 'test',
         email: 'test@test.com',
         password: 'testtest',
-        borrowing: booktest,
+        borrowing: '',
         requesting: ''
     });
 
@@ -24,14 +22,12 @@ if (Meteor.users.find().count() === 0) {
 }
 
 if (Books.find().count() === 0) {
-	var test = Meteor.users.findOne();
-
 	Books.insert({
 		title: 'A thousand splendid suns',
 		author: 'Khaled Hosseini',
 		cover: 'http://ecx.images-amazon.com/images/I/713ZoQHz4mL.jpg',
 		submitted: new Date(),
-		borrowedBy: test,
+		borrowedBy: '',
 		borrowedOn: new Date('February 8, 2016 03:24:00'),
 		requestedBy: ''
 	});
