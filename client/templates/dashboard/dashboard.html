@@ -2,26 +2,26 @@
 	<section class="dashboard container-section col-xs-12">
 		<h3>{{currentUser.username}}'s Dashboard</h3>
 		<ul class="nav nav-tabs" role="tablist">
-			<li role="presentation" class="dashboard__tab-heading active">
+			<li role="presentation" class="dashboard__tab-heading active hidden-xs">
 				<a href="#yourbooks" aria-controls="yourbooks" role="tab" data-toggle="tab">
 					<i class="fa fa-star-o"></i>
 					Your Books
 				</a>
 			</li>
-			<li role="presentation" class="dashboard__tab-heading">
+			<li role="presentation" class="dashboard__tab-heading hidden-xs">
 				<a href="#wishlist" aria-controls="wishlist" role="tab" data-toggle="tab">
 					<i class="fa fa-list"></i>
 					Your Wishlist
 				</a>
 			</li>
-			<li role="presentation" class="dashboard__tab-heading">
+			<li role="presentation" class="dashboard__tab-heading hidden-xs">
 				<a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">
 					<i class="fa fa-cog"></i>
 					Settings
 				</a>
 			</li>
 			{{#if isInRole 'admin'}}
-				<li role="manage" class="dashboard__tab-heading">
+				<li role="manage" class="dashboard__tab-heading hidden-xs">
 					<a href="#manage" aria-controls="manage" role="tab" data-toggle="tab">
 						<i class="fa fa-users"></i>
 						Manage ({{requestsCount}})
@@ -30,16 +30,35 @@
 			{{/if}}
 		</ul>
 		<div class="tab-content dashboard__content">
+			<a href="#yourbooks" aria-controls="yourbooks" role="tab" data-toggle="tab" class="dashboard__tab-link visible-xs-block active">
+				<i class="fa fa-star-o"></i>
+				Your Books
+			</a>
 			<div role="tabpanel" class="dashboard__tab-body tab-pane active" id="yourbooks">
 				{{> dashboardYourBooks}}
 			</div>
+
+			<a href="#wishlist" aria-controls="wishlist" role="tab" data-toggle="tab" class="dashboard__tab-link visible-xs-block">
+				<i class="fa fa-list"></i>
+				Your Wishlist
+			</a>
 			<div role="tabpanel" class="dashboard__tab-body tab-pane" id="wishlist">
 				{{> dashboardWishlist}}
 			</div>
+
+			<a href="#settings" aria-controls="settings" role="tab" data-toggle="tab" class="dashboard__tab-link visible-xs-block">
+				<i class="fa fa-cog"></i>
+				Settings
+			</a>
 			<div role="tabpanel" class="dashboard__tab-body tab-pane" id="settings">
 				{{> dashboardSettings}}
 			</div>
+
 			{{#if isInRole 'admin'}}
+				<a href="#manage" aria-controls="manage" role="tab" data-toggle="tab" class="dashboard__tab-link visible-xs-block">
+					<i class="fa fa-users"></i>
+					Manage ({{requestsCount}})
+				</a>
 				<div role="tabpanel" class="dashboard__tab-body tab-pane" id="manage">
 					{{> dashboardManage}}
 				</div>

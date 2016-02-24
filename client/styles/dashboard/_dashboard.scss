@@ -4,9 +4,14 @@
 	padding: 20px;
 	color: $main-white;
 	&__section {
-		background-color: darken($main-pink, 20%);
-		padding: 10px 20px;
+		padding: 0;
+		margin: 0;
+		padding-bottom: 20px;
 		color: white;
+	}
+	&__section-content {
+		padding: 10px 20px;
+		background-color: darken($main-pink, 20%);
 	}
 	&__list {
 		margin: 0;
@@ -24,13 +29,22 @@
 	}
 	&__tab {
 		margin: 0;
-		color: $main-white;
 	}
 	&__tabs {
 		background-color: lighten($light-grey, 10%);
 	}
+	&__tab-link {
+		background-color: lighten($main-pink, 10%);
+		padding: 10px;
+		color: white;
+		border-bottom: 1px solid lighten($main-pink, 20%);
+		&:hover, &:active, &:focus {
+			color: darken($main-pink, 20%);
+		}
+	}
 	&__content {
-		border-radius: 4px 4px 0 0;
+		border-radius: 4px;
+		border: 1px solid $main-pink;
 	}
 	.nav-tabs {
 		border: 0;
@@ -52,7 +66,21 @@
 	}
 
 	&__tab-body {
+		color: $main-pink;
 		padding: 20px;
-		background-color: lighten($main-pink, 10%);
+		background-color: $main-white;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.dashboard {
+		&__tab-body {
+			background-color: lighten($main-pink, 10%);
+			color: $main-white;
+		}
+		&__content {
+			// border-radius: 4px 4px 0 0;
+			border: 0;
+		}
 	}
 }
