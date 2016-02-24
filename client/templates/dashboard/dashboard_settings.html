@@ -6,7 +6,7 @@
 			<div class="dashboard__section-content">
 				<h4>Account details</h4>
 				<p>Username: {{currentUser.username}}</p>
-				<p>Email: {{currentUser.emails.address}}</p>
+				<p>Email: {{currentUser.emails.[0].address}}</p>
 				<a href="{{pathFor 'atChangePwd'}}" class="btn btn-large btn-green">Change password</a>
 			</div>
 		</div>

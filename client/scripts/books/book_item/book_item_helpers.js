@@ -1,4 +1,7 @@
 if(Meteor.isClient) {
+	Meteor.subscribe('books');
+	Meteor.subscribe('userData');
+
 	Template.bookItem.helpers({
 		submitted: function() {
 			return this.submitted.toDateString();
@@ -39,6 +42,11 @@ if(Meteor.isClient) {
 
 				return requestedBy === currentUser;
 			}
+		},
+		inWishlist: function() {
+			var wishlist = Meteor.user().wishlist;
+
+			console.log(wishlist.indexOf(this) != -1);
 		}
 	});
 }

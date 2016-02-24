@@ -4,7 +4,8 @@ if (Meteor.users.find().count() === 0) {
         email: 'test@test.com',
         password: 'testtest',
         borrowing: '',
-        requesting: ''
+        requesting: '',
+        wishlist: []
     });
 
     Accounts.createUser({
@@ -12,7 +13,8 @@ if (Meteor.users.find().count() === 0) {
     	email: 'admin@bookleycrossing.com',
     	password: 'admintest',
     	borrowing: '',
-    	requesting: ''
+    	requesting: '',
+    	wishlist: []
     });
     var adminId = Meteor.users.findOne({username: 'admin'})._id;
     var testId = Meteor.users.findOne({username: 'test'})._id;

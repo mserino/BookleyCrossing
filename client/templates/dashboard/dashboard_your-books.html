@@ -1,7 +1,11 @@
 <template name="dashboardYourBooks">
 	<div class="dashboard-your-books dashboard__tab row">
 		<h3>Your Books</h3>
-		<h4>You are reading</h4>
+		{{#if book}}
+			<h4>You are reading</h4>
+		{{else}}
+			<h4>You are not reading any book yet</h4>
+		{{/if}}
 		{{#with book}}
 		 	<div class="dashboard-your-books__book col-xs-12 col-sm-4 col-md-3">
 				<a href="{{pathFor 'bookPage'}}">
