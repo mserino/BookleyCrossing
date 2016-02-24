@@ -4,6 +4,7 @@
 		@include typographyBold;
 	}
 	&__input {
+		height: 100px;
 		&.error {
 			border: 1px solid $main-pink;
 		}
@@ -14,8 +15,4 @@
 			color: $main-pink;
 		}
 	}
-}
-
-.js-new-book-description {
-	height: 100px;
 }
