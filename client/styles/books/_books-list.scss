@@ -1,6 +1,7 @@
 .books-list {
 	margin: 0;
 	padding: 40px 30px;
+	position: relative;
 
 	&__item-container {
 		margin: 0;
@@ -12,29 +13,89 @@
 		padding: 5px 0;
 		min-height: 60px;
 	}
+
 	&__cover {
 		height: 260px;
 		overflow: hidden;
 		text-align: center;
+		position: relative;
+		cursor: pointer;
+
+		&:hover {
+			.books-list__description-container {
+		    	opacity: 2;
+		    	z-index: 100;
+		    	transition: all 0.3s ease;
+  			}
+
+	  		.books-list__cover-image {
+			    transform: scale(1.1);
+			    -webkit-transform: scale(1.1);
+			    -ms-transform: scale(1.05);
+			    transform-origin: 50%,50%;
+			    transition: all 0.3s ease;
+			}
+		}
+
+		&-container {
+			position: absolute;
+			top: 0;
+			z-index: 1;
+			height: 100%;
+			overflow: hidden;
+			border-radius: 20px;
+			left: 50%;
+			transform: translatex(-50%);
+			-webkit-transform:translateX(-50%);
+    		-ms-transform:translateX(-50%);
+		}
+
 		&-image {
 			height: 100%;
 			width: 160px;
 			border-radius: 20px;
 		}
 	}
+
 	&__title {
 		color: $dark-grey;
-		&:hover {
-			color: darken($main-orange, 20%);
-		}
 	}
+
 	&__status {
 		width: 60px;
 		right: 0;
 		top: -20px;
 		position: absolute;
+		z-index: 101;
+	}
+
+	&__path {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&__description-container {
+		position: absolute;
+		background-color: rgba(51,51,51,0.6);
+		height: 300px;
+		width: 200px;
+		border-radius: 20px;
+		top: 0;
+		padding: 40px 20px;
+		left: 50%;
+		transform: translatex(-50%);
+		-webkit-transform:translateX(-50%);
+    	-ms-transform:translateX(-50%);
+
+		&-text{
+			color: $main-white;
+			word-wrap: break-word;
+		}
 	}
 }
+
+
 
 @media (min-width: $screen-sm-min) {
 	.books-list {
@@ -45,9 +106,22 @@
 				width: 200px;
 			}
 		}
+
 		&__status {
 			right: 0;
 			width: 70px;
+		}
+	}
+}
+
+
+@media (max-width: $screen-sm-min) {
+	.books-list {
+		&__description-container {
+			height: 260px;
+			width: 160px;
+			padding: 30px 15px;
+			font-size: 12px;
 		}
 	}
 }
@@ -56,6 +130,11 @@
 	.books-list {
 		&__status {
 			right: 10px;
+		}
+
+		&__description-container {
+			height: 300px;
+			width: 200px;
 		}
 	}
 }

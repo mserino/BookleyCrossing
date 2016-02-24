@@ -4,6 +4,7 @@
 		@include typographyBold;
 	}
 	&__input {
+		height: 100px;
 		&.error {
 			border: 1px solid $main-pink;
 		}

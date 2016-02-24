@@ -3,11 +3,12 @@ if(Meteor.isClient) {
 		'submit form': function(e) {
 			e.preventDefault();
 
-			var book = {
-				title: $(e.target).find('.js-new-book-title').val(),
-				author: $(e.target).find('.js-new-book-author').val(),
-				cover: $(e.target).find('.js-new-book-cover').val()
-			};
+		var book = {
+			title: $(e.target).find('.js-new-book-title').val(),
+			author: $(e.target).find('.js-new-book-author').val(),
+			cover: $(e.target).find('.js-new-book-cover').val(),
+			description: $(e.target).find('.js-new-book-description').val()	
+		};
 
 			Meteor.call('addBook', book, function(error, result) {
 				if (error) {
