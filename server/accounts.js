@@ -1,7 +1,7 @@
 Accounts.onCreateUser(function(options, user) {
   user.borrowing = '';
   user.requesting = '';
-  
+
 	if (options.profile)
 		user.profile = options.profile;
 
