@@ -35,7 +35,7 @@ if (Books.find().count() === 0) {
 		title: 'Harry Potter and the Philosopers Stone',
 		author: 'Joanne K. Rowling',
 		cover: 'http://ecx.images-amazon.com/images/I/A1to2wtnOHL.jpg',
-    description: 'Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!'',
+    description: 'Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry\'s eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!',
 		submitted: new Date(),
 		borrowedBy: '',
 		borrowedOn: '',
@@ -44,7 +44,7 @@ if (Books.find().count() === 0) {
 	Books.insert({
 		title: 'My name is Malala',
 		author: 'Malala Yousafzai',
-    description: 'When the Taliban took control of the Swat Valley, one girl fought for her right to an education. On Tuesday, 9 October 2012, she almost paid the ultimate price when she was shot in the head at point-blank range. Malala Yousafzai's extraordinary journey has taken her from a remote valley in northern Pakistan to the halls of the United Nations. She has become a global symbol of peaceful protest and is the youngest ever winner of the Nobel Peace Prize. I Am Malala will make you believe in the power of one person's voice to inspire change in the world.',
+    description: 'When the Taliban took control of the Swat Valley, one girl fought for her right to an education. On Tuesday, 9 October 2012, she almost paid the ultimate price when she was shot in the head at point-blank range. Malala Yousafzai\'s extraordinary journey has taken her from a remote valley in northern Pakistan to the halls of the United Nations. She has become a global symbol of peaceful protest and is the youngest ever winner of the Nobel Peace Prize. I Am Malala will make you believe in the power of one person\'s voice to inspire change in the world.',
 		cover: 'http://ecx.images-amazon.com/images/I/51Mn6IUJI%2BL.jpg',
 		submitted: new Date(),
 		borrowedBy: '',
