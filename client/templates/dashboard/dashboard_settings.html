@@ -1,5 +1,14 @@
 <template name="dashboardSettings">
-	<div class="dashboard-settings">
-		Dashboard_settings
+	<div class="dashboard-settings dashboard__tab row">
+		<h3>Settings</h3>
+
+		<div class="dashboard__section col-xs-12 col-sm-6">
+			<div class="dashboard__section-content">
+				<h4>Account details</h4>
+				<p>Username: {{currentUser.username}}</p>
+				<p>Email: {{currentUser.emails.address}}</p>
+				<a href="{{pathFor 'atChangePwd'}}" class="btn btn-large btn-green">Change password</a>
+			</div>
+		</div>
 	</div>
 </template>
