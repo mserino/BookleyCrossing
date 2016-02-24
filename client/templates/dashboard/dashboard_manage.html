@@ -2,25 +2,27 @@
 	<div class="dashboard-manage dashboard__tab row">
 		<h3>Manage</h3>
 		<div class="dashboard__section col-xs-12 col-sm-6">
-			<h4>
-				{{#if requestsNotEmpty}}
-					<div class="notification-pulse"></div>
-				{{/if}}
-				Pending requests
-			</h4>
-			<ul class="dashboard__list">
-				{{#if requestsNotEmpty}}
-						{{#each requests}}
-							{{> dashboardRequest}}
-						{{/each}}
-				{{else}}
-					No pending requests
-				{{/if}}
-			</ul>
+			<div class="dashboard__section-content">
+				<h4>
+					{{#if requestsNotEmpty}}
+						<div class="notification-pulse"></div>
+					{{/if}}
+					Pending requests
+				</h4>
+				<ul class="dashboard__list">
+					{{#if requestsNotEmpty}}
+							{{#each requests}}
+								{{> dashboardRequest}}
+							{{/each}}
+					{{else}}
+						<div class="dashboard__item">No pending requests</div>
+					{{/if}}
+				</ul>
+			</div>
 		</div>
 
-		<div class="dashboard-user-reading col-xs-12 col-sm-6">
-			<div class="dashboard__section">
+		<div class="dashboard__section col-xs-12 col-sm-6">
+			<div class="dashboard__section-content">
 				<h4>Users are reading</h4>
 				<ul class="dashboard__list">
 					{{#each books}}
