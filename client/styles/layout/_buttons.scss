@@ -31,6 +31,20 @@
 		}
 	}
 
+	&-orange {
+		// !importants to override bootstrap styles
+		background-color: $main-orange;
+		&:hover {
+			background-color: darken($main-orange, 10%) !important;
+		}
+		&:active {
+			background-color: darken($main-orange, 30%) !important;
+		}
+		&:focus {
+			background-color: $main-orange !important;
+		}
+	}
+
 	&-large {
 		min-width: 200px;
 	}
