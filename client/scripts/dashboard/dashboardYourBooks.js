@@ -10,10 +10,12 @@ if(Meteor.isClient) {
 	});
 
 	Template.dashboardYourBooks.events({
-		'click .js-dashboard-return': function() {
-			var book = this;
+		'click .js-dashboard-return': function(e) {
+			e.preventDefault();
+			var book = Books.findOne({_id: this._id});
+
 			Meteor.call('returnBook', book, function(error, result) {
-				FlashMessages.sendSuccess('Thank you, your book has been returned', {autoHide: true, hideDelay: 5000})
+				FlashMessages.sendSuccess('Thank you, your book has been returned', {autoHide: true, hideDelay: 5000});
 			});
 		}
 	});

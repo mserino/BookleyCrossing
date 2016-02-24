@@ -1,4 +1,4 @@
-if (Meteor.isClient) {
+if(Meteor.isClient) {
 	Meteor.subscribe('requests');
 	Meteor.subscribe('books');
 
