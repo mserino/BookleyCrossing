@@ -1,6 +1,7 @@
 Accounts.onCreateUser(function(options, user) {
   user.borrowing = '';
   user.requesting = '';
+  user.wishlist = [];
 
 	if (options.profile)
 		user.profile = options.profile;

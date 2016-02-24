@@ -29,6 +29,16 @@ if(Meteor.isClient) {
 			Meteor.call('returnBook', book, function(error, result) {
 				FlashMessages.sendSuccess('Thank you!', {autoHide: true, hideDelay: 5000});
 			});
+		},
+
+		'click .js-wishlist-add': function(e) {
+			e.preventDefault();
+			var book = this,
+					user = Meteor.user();
+
+			Meteor.call('addToWishlist', book, user, function(error, result) {
+				FlashMessages.sendSuccess('Book added to your wishlist', {autoHide: true, hideDelay: 5000});
+			});
 		}
 	});
 }

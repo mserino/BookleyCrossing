@@ -56,8 +56,32 @@
 			}
 		}
 	}
+	&__wishlist {
+		padding: 10px 0;
+		margin: 0;
+		cursor: pointer;
+		.icon-heart-full {
+			display: none;
+		}
+	}
 	&__errors {
 		color: $main-pink;
 		margin-bottom: 10px;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.book-detail {
+		&__wishlist {
+			text-align: left;
+			&:hover {
+				.icon-heart-full {
+					display: inline-block;
+				}
+				.icon-heart-empty {
+					display: none;
+				}
+			}
+		}
 	}
 }
