@@ -19,6 +19,19 @@
 				{{/if}}
 			{{/if}}
 
+			{{#if inWishlist}}
+				<div class="book-detail__wishlist book-detail__wishlist--added col-xs-12 js-wishlist-remove">
+					<i class="fa fa-heart"></i>
+					This book is in your wishlist
+				</div>
+			{{else}}
+				<div class="book-detail__wishlist col-xs-12 js-wishlist-add">
+					<i class="fa fa-heart-o icon-heart-empty"></i>
+					<i class="fa fa-heart icon-heart-full"></i>
+					Add to your wishlist
+				</div>
+			{{/if}}
+
 			<p class="book-detail__synopsis">{{description}}</p>
 		</div>
 		<div class="col-xs-12 col-sm-6 book-detail__button-container">
@@ -40,15 +53,6 @@
 					<button class="col-xs-12 book-detail__button book-detail__button--borrow btn btn-large js-borrow-book">Request this book</button>
 				{{/if}}
 			{{/if}}
-
-			{{#if inWishlist}}
-				A
-			{{/if}}
-			<div class="book-detail__wishlist col-xs-12 js-wishlist-add">
-				<i class="fa fa-heart-o icon-heart-empty"></i>
-				<i class="fa fa-heart icon-heart-full"></i>
-				Add to your wishlist
-			</div>
 
 		</div>
 	</section>
