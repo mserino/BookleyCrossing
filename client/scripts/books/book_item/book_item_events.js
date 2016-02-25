@@ -34,10 +34,14 @@ if(Meteor.isClient) {
 		'click .js-wishlist-add': function(e) {
 			e.preventDefault();
 			var book = this,
-					user = Meteor.user();
+				user = Meteor.user();
 
 			Meteor.call('addToWishlist', book, user, function(error, result) {
-				FlashMessages.sendSuccess('Book added to your wishlist', {autoHide: true, hideDelay: 5000});
+				if(result.bookInWishlist) {
+					FlashMessages.sendError('You have already added this book to your wishlist', {autoHide: true, hideDelay: 5000});
+				} else {
+					FlashMessages.sendSuccess('Book added to your wishlist', {autoHide: true, hideDelay: 5000});
+				}
 			});
 		}
 	});
