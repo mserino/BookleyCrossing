@@ -22,9 +22,7 @@ if(Meteor.isClient) {
 					user = this.user,
 					request = this;
 
-			Meteor.call('borrowBook', book, user, request, function(error, result) {
-				$('.js-dashboard-request').text('Request approved').addClass('approved');
-			});
+			Meteor.call('borrowBook', book, user, request);
 		},
 		'click .js-dashboard-request-decline': function(e) {
 			e.preventDefault();
