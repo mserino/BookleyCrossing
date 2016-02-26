@@ -19,17 +19,19 @@
 				{{/if}}
 			{{/if}}
 
-			{{#if inWishlist}}
-				<div class="book-detail__wishlist book-detail__wishlist--added col-xs-12 js-wishlist-remove">
-					<i class="fa fa-heart"></i>
-					This book is in your wishlist
-				</div>
-			{{else}}
-				<div class="book-detail__wishlist col-xs-12 js-wishlist-add">
-					<i class="fa fa-heart-o icon-heart-empty"></i>
-					<i class="fa fa-heart icon-heart-full"></i>
-					Add to your wishlist
-				</div>
+			{{#if currentUser}}
+				{{#if inWishlist}}
+					<div class="book-detail__wishlist book-detail__wishlist--added col-xs-12 js-wishlist-remove">
+						<i class="fa fa-heart"></i>
+						This book is in your wishlist
+					</div>
+				{{else}}
+					<div class="book-detail__wishlist col-xs-12 js-wishlist-add">
+						<i class="fa fa-heart-o icon-heart-empty"></i>
+						<i class="fa fa-heart icon-heart-full"></i>
+						Add to your wishlist
+					</div>
+				{{/if}}
 			{{/if}}
 
 			<p class="book-detail__synopsis">{{description}}</p>
