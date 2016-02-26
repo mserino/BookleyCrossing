@@ -7,20 +7,22 @@
 		padding: 10px;
 	}
 	&__book {
-		background-color: darken($main-pink, 30%);
 		padding: 15px;
 		text-align: center;
 		a {
-			color: $main-white;
+			color: $main-black;
+			display: block;
+			margin-bottom: 10px;
 			&:hover, &:focus, &:active {
 				color: $main-pink;
+				text-decoration: none;
 			}
 		}
 	}
 	&__text {
 		display: block;
-	}
-	.btn {
-		margin-top: 10px;
+		&--author {
+			@include typographyItalic;
+		}
 	}
 }

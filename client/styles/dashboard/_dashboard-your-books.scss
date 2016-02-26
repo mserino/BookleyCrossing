@@ -1,0 +1,9 @@
+.dashboard-your-books {
+	&__link {
+		color: $main-black;
+		&:hover, &:focus, &:active {
+			color: $main-pink;
+			text-decoration: none;
+		}
+	}
+}
