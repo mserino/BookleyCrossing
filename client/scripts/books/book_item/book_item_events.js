@@ -35,14 +35,15 @@ if(Meteor.isClient) {
 			e.preventDefault();
 			var book = this,
 				user = Meteor.user();
-
-			Meteor.call('addToWishlist', book, user, function(error, result) {
-				if(result.bookInWishlist) {
-					FlashMessages.sendError('You have already added this book to your wishlist', {autoHide: true, hideDelay: 5000});
-				} else {
-					FlashMessages.sendSuccess('Book added to your wishlist', {autoHide: true, hideDelay: 5000});
-				}
-			});
+			if(user) {
+				Meteor.call('addToWishlist', book, user, function(error, result) {
+					if(result.bookInWishlist) {
+						FlashMessages.sendError('You have already added this book to your wishlist', {autoHide: true, hideDelay: 5000});
+					} else {
+						FlashMessages.sendSuccess('Book added to your wishlist', {autoHide: true, hideDelay: 5000});
+					}
+				});
+			}
 		}
 	});
 }

@@ -43,6 +43,10 @@
 
 	&__title {
 		color: $dark-grey;
+		&:hover, &:focus, &:active {
+			color: $main-orange;
+			text-decoration: none;
+		}
 	}
 
 	&__status {
