@@ -1,8 +1,8 @@
 <template name="headerLogin">
-	<ul class="header-login col-xs-12 list-inline list-unstyled">
+	<ul class="header-login col-xs-12 list-inline list-unstyled container-section hidden-xs">
 		{{#if currentUser}}
-			<li>Welcome {{currentUser.username}}</li>
 			<li><a href="{{pathFor 'dashboard'}}" class="header-login__link">
+				<i class="fa fa-user"></i>
 				My profile
 				{{#if isInRole 'admin'}}
 					{{#if requestsNotification}}
@@ -10,10 +10,25 @@
 					{{/if}}
 				{{/if}}
 			</a></li>
-			<li><a href="{{pathFor 'signOut'}}" class="header-login__link">Sign out</a></li>
+			<li>
+				<a href="{{pathFor 'signOut'}}" class="header-login__link">
+					<i class="fa fa-sign-out"></i>
+					Sign out
+				</a>
+			</li>
 		{{else}}
-			<li><a href="{{pathFor 'atSignUp'}}" class="header-login__link">Sign up</a></li>
-			<li><a href="{{pathFor 'atSignIn'}}" class="header-login__link">Sign in</a></li>
+			<li>
+				<a href="{{pathFor 'atSignUp'}}" class="header-login__link">
+					<i class="fa fa-user-plus"></i>
+					Sign up
+				</a>
+			</li>
+			<li>
+				<a href="{{pathFor 'atSignIn'}}" class="header-login__link">
+					<i class="fa fa-sign-in"></i>
+					Sign in
+				</a>
+			</li>
 		{{/if}}
 	</ul>
 </template>

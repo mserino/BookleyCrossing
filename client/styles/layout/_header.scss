@@ -3,6 +3,7 @@
 @import "header/header-login";
 
 .header {
+	@include fontSansSerif;
 	background-color: $main-white;
 
 	&__list-container {
@@ -27,6 +28,30 @@
 		margin: 0;
 		padding-top: 35px;
 		text-align: center;
+	}
+
+	&__list-login {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		a {
+			color: darken($main-orange, 20%);
+			display: block;
+			padding: 10px 20px;
+			&:focus, &:hover {
+				text-decoration: none;
+			}
+			&:hover {
+				color: $main-orange;
+				background-color: lighten($main-orange, 30%);
+			}
+		}
+	}
+	&__list-login-item {
+		border-bottom: 1px solid lighten($dark-grey, 65%);
+		&:last-of-type {
+			border-bottom: 0;
+		}
 	}
 
 	&__list-item {

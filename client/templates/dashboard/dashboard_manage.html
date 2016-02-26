@@ -26,7 +26,7 @@
 				<h4>Users are reading</h4>
 				<ul class="dashboard__list">
 					{{#each books}}
-						{{> dashboardBook}}
+						{{> dashboardManageBook}}
 					{{/each}}
 				</ul>
 			</div>
@@ -42,7 +42,7 @@
 	</li>
 </template>
 
-<template name="dashboardBook">
+<template name="dashboardManageBook">
 	{{#if borrowed}}
 		<li class="dashboard__item">
 		<span class="dashboard__username">{{borrowedBy.username}}</span> is reading <span class="dashboard__title">{{title}}</span> since {{borrowedOn}}

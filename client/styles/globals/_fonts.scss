@@ -12,18 +12,18 @@
 //Satisfy
 @import url(https://fonts.googleapis.com/css?family=Satisfy);
 
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface|Lato:400,100,100italic,300,300italic,400italic,700,900,700italic,900italic|Vollkorn:400,400italic,700,700italic);
+
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400italic,700,700italic);
+
 @mixin fontSansSerif() {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 }
 
 @mixin fontSerif() {
-	font-family: 'Oleo Script', cursive;
+	font-family: 'Vollkorn', cursive;
 }
 
-@mixin fontHandWriting() {
-	font-family: 'Delius', cursive;
-}
-
-@mixin fontSatisfy() {
-	font-family: 'Satisfy', cursive;
+@mixin fontLogo() {
+	font-family: 'Abril Fatface', cursive;
 }

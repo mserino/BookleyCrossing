@@ -21,8 +21,6 @@
 		position: relative;
 		cursor: pointer;
 
-		
-
 		&-container {
 			position: absolute;
 			top: 0;
@@ -77,6 +75,7 @@
 		&-text{
 			color: $main-white;
 			word-wrap: break-word;
+			line-height: 1.3;
 		}
 	}
 }

@@ -1,7 +1,10 @@
-.dashboard-your-books {
+.dashboard-book {
 	&__cover {
 		height: 200px;
 		margin-bottom: 10px;
+	}
+	&__book-container {
+		padding: 10px;
 	}
 	&__book {
 		background-color: darken($main-pink, 30%);
