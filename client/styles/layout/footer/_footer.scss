@@ -3,29 +3,38 @@
 	width: 100%;
 	background-color: $dark-grey;
 	margin-top: 70px;
-	color: white;
+	color: $main-white;
 
 	&__section {
+		list-style: none;
 		padding: 15px 40px 15px 0;
+		margin: 0;
 
 		&-title {
 			padding-bottom: 5px;
 		}
+		&-link {
+			color: $main-white;
+			&:hover, &:focus, &:active {
+				color: $light-grey;
+				text-decoration: none
+			}
+		}
 	}
 
-	&__social { 
-			list-style: none;
-			margin: 0;
-			padding: 0;
+	&__social {
+		list-style: none;
+		margin: 0;
+		padding: 0;
 
 		&-links {
-				color: white;
-				padding-bottom: 15px;
+			color: white;
+			padding-bottom: 15px;
 
-				&:hover {
-					color: $light-grey;
-					text-decoration: none
-				}
+			&:hover {
+				color: $light-grey;
+				text-decoration: none
+			}
 
 			&-icon{
 				padding-right: 10px;

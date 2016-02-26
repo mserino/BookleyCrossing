@@ -24,7 +24,7 @@ if(Meteor.isClient) {
 
 	Handlebars.registerHelper('trim', function(passedString, startstring, endstring) {
 		 var theString = passedString.substring( startstring, endstring );
-		 return new Handlebars.SafeString(theString) + "..."
+		 return new Handlebars.SafeString(theString) + "...";
 	});
 
 	Handlebars.registerHelper('empty', function(array) {
