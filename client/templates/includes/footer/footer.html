@@ -1,15 +1,20 @@
 <template name="footer">
 	<footer class="footer col-xs-12">
-		<div class="container footer__container">
-			<div class="footer__section col-md-4">	
-					<h3 class="footer__section-title">Books</h3>
-					<p class="footer__section-text">Bookley Crossing is a non-profit initiative created by a team of developers at Deloitte Digital that aims to promote reading, culture, education and charity in the workplace.</p>
+		<div class="footer__container container-section col-xs-9">
+			<ul class="footer__section col-xs-12 col-md-2">
+				<li><h3 class="footer__section-title">Books</h3></li>
+				<li><a href="{{pathFor 'booksList'}}" class="footer__section-text footer__section-link">Browse books</a></li>
+			</ul>
+			<ul class="footer__section col-xs-12 col-md-2">
+				<li><h3 class="footer__section-title">Help</h3></li>
+				<li><a href="{{pathFor 'about'}}" class="footer__section-text footer__section-link">About</a></li>
+				<li><a href="#" class="footer__section-text footer__section-link">Contact us</a></li>
+			</ul>
+			<div class=" footer__section col-xs-12 col-md-6">
+				<h3 class="footer__section-title">About Us</h3>
+				<p class="footer__section-text">Bookley Crossing is a non-profit initiative created by a team of developers at Deloitte Digital that aims to promote reading, culture, education and charity in the workplace.</p>
 			</div>
-			<div class=" footer__section col-md-4">	
-					<h3 class="footer__section-title">About Us</h3>
-					<p class="footer__section-text">Bookley Crossing is a non-profit initiative created by a team of developers at Deloitte Digital that aims to promote reading, culture, education and charity in the workplace.</p>
-			</div>
-			<div class="footer__section col-md-4">	
+			<div class="footer__section col-xs-12 col-md-2">
 				<h3 class="footer__section-title">Follow Us</h3>
 					<ul class="footer__social">
 						<li>
