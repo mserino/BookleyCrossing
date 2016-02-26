@@ -1,5 +1,20 @@
 <template name="dashboardWishlist">
-	<div class="dashboard-wishlist">
-		Dashboard_Wishlist
+	<div class="dashboard-wishlist dashboard__tab row">
+	<h3>Your Wishlist</h3>
+		{{#if empty wishlist}}
+			Your wishlist is empty
+		{{/if}}
+		{{#each wishlist}}
+			{{> dashboardWishlistBook}}
+		{{/each}}
+	</div>
+</template>
+
+<template name="dashboardWishlistBook">
+	<div class="dashboard-book__book-container col-xs-12 col-sm-4 col-md-3">
+		<div class="dashboard-book__book">
+			{{> dashboardBook}}
+			<button class="btn btn-small btn-orange js-wishlist-remove">Remove from wishlist</button>
+		</div>
 	</div>
 </template>

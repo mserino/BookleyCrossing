@@ -4,16 +4,12 @@
 		{{#if book}}
 			<h4>You are reading</h4>
 		{{else}}
-			<h4>You are not reading any book yet</h4>
+			<p>You are not reading any book yet</p>
 		{{/if}}
 		{{#with book}}
-		 	<div class="dashboard-your-books__book col-xs-12 col-sm-4 col-md-3">
-				<a href="{{pathFor 'bookPage'}}">
-					<img class="dashboard-your-books__cover" src="{{cover}}"/>
-					<span class="dashboard-your-books__text">{{title}}</span>
-					<span class="dashboard-your-books__text">by {{author}}</span>
-				</a>
-				<button class="btn btn-small btn-orange js-dashboard-return">Return this book</button>
+			<div class="dashboard-book__book col-xs-12 col-sm-4 col-md-3">
+		 		{{> dashboardBook}}
+ 				<button class="btn btn-small btn-orange js-dashboard-return">Return this book</button>
 			</div>
 		{{/with}}
 	</div>

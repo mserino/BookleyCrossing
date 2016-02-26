@@ -32,7 +32,6 @@
 	}
 	&__button {
 		color: $main-white;
-		@include fontHandWriting;
 		font-size: 2rem;
 
 		&:hover, &:focus {

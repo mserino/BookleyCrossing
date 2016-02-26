@@ -37,7 +37,7 @@ if(Meteor.isClient) {
 		}
 	});
 
-	Template.dashboardBook.helpers({
+	Template.dashboardManageBook.helpers({
 		borrowed: function() {
 			return this.borrowedBy !== '';
 		},
@@ -46,7 +46,7 @@ if(Meteor.isClient) {
 		}
 	});
 
-	Template.dashboardBook.events({
+	Template.dashboardManageBook.events({
 		'click .js-dashboard-force-return': function(e) {
 			e.preventDefault();
 			var book = Books.findOne({_id: this._id});

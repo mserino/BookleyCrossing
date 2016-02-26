@@ -44,11 +44,13 @@ if(Meteor.isClient) {
 			}
 		},
 		inWishlist: function() {
+			if(Meteor.user()) {
 			var wishlist = Meteor.user().wishlist;
-			var bookId = this._id;
+				var bookId = this._id;
 
-			if(_.contains(wishlist, bookId)) {
-				return true;
+				if(_.contains(wishlist, bookId)) {
+					return true;
+				}
 			}
 		}
 	});
