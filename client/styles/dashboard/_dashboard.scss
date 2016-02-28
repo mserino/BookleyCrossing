@@ -28,7 +28,7 @@
 		@include typographyItalic;
 	}
 	&__tab {
-		margin: 0;
+		margin: auto;
 	}
 	&__tabs {
 		background-color: lighten($light-grey, 10%);
@@ -73,6 +73,8 @@
 		color: $main-pink;
 		padding: 20px;
 		background-color: $main-white;
+		min-height: 450px;
+
 	}
 }
 

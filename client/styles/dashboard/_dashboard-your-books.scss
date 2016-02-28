@@ -1,9 +1,22 @@
 .dashboard-your-books {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 75px;
+	text-align: center;
 	&__link {
-		color: $main-black;
+		color: $main-pink;
 		&:hover, &:focus, &:active {
-			color: $main-pink;
+			color: darken($main-pink, 15%);
 			text-decoration: none;
 		}
+	}
+}
+
+@media (min-width: $screen-md-min){
+	.dashboard-your-books {
+		height: 0px;
 	}
 }
