@@ -31,7 +31,7 @@
 			left: 50%;
 			transform: translatex(-50%);
 			-webkit-transform:translateX(-50%);
-    		-ms-transform:translateX(-50%);
+    	-ms-transform:translateX(-50%);
 		}
 
 		&-image {
@@ -131,7 +131,7 @@
 				.books-list__description-container {
 			    	opacity: 2;
 			    	z-index: 100;
-			    	transition: all 0.3s ease;
+			    	transition: all 0.5s ease;
 	  			}
 
 		  		.books-list__cover-image {
@@ -139,7 +139,7 @@
 				    -webkit-transform: scale(1.08);
 				    -ms-transform: scale(1.08);
 				    transform-origin: 50%,50%;
-				    transition: all 0.3s ease;
+				    transition: all 0.5s ease;
 				}
 			}
 		}
