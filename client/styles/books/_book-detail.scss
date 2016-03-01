@@ -67,7 +67,7 @@
 			display: none;
 		}
 		&--added {
-			pointer-events: none;
+			cursor: text;
 		}
 	}
 	&__errors {

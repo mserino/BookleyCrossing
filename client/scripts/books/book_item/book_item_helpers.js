@@ -7,7 +7,7 @@ if(Meteor.isClient) {
 			return this.submitted.toDateString();
 		},
 		borrowed: function() {
-			if(this.borrowedBy.username) {
+			if (this.borrowedBy.username) {
 				return this.borrowedBy.username;
 			}
 		},
@@ -15,11 +15,11 @@ if(Meteor.isClient) {
 			return this.borrowedOn.toDateString();
 		},
 		isBorrowing: function() {
-			if(this.borrowedBy.username) {
+			if (this.borrowedBy.username) {
 				var borrowedBy = this.borrowedBy.username,
 					currentUser;
 
-				if(Meteor.user()) {
+				if (Meteor.user()) {
 					currentUser = Meteor.user().username;
 				}
 
@@ -27,24 +27,22 @@ if(Meteor.isClient) {
 			}
 		},
 		requested: function() {
-			if (this.requestedBy.username) {
-				return this.requestedBy.username;
+			if (this.requestedBy !== '') {
+				return true;
 			}
 		},
 		isRequesting: function() {
-			if(this.requestedBy.username) {
-				var requestedBy = this.requestedBy.username,
-						currentUser;
+			if (this.requestedBy !== '') {
+				if (Meteor.user()) {
+					var userId = this.requestedBy,
+						currentUserId = Meteor.user()._id;
 
-				if(Meteor.user()) {
-					currentUser = Meteor.user().username;
+					return userId === currentUserId;
 				}
-
-				return requestedBy === currentUser;
 			}
 		},
 		inWishlist: function() {
-			if(Meteor.user()) {
+			if (Meteor.user()) {
 			var wishlist = Meteor.user().wishlist;
 				var bookId = this._id;
 

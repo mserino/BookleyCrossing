@@ -2,15 +2,29 @@
 	<div class="dashboard-your-books dashboard__tab row">
 		{{#if book}}
 			<h3>You are reading</h3>
+			{{#with book}}
+				<div class="dashboard-book__book col-xs-12">
+			 		{{> dashboardBook}}
+	 				<button class="btn btn-small btn-orange js-dashboard-return">Return this book</button>
+				</div>
+			{{/with}}
 		{{else}}
-			<p>You are not reading any books</p>
-			<a href="{{pathFor 'booksList'}}" class="dashboard-your-books__link">Click here to choose a book</a>
+			{{#if request}}
+				<h3>You are requesting</h3>
+				{{#with requestBook request}}
+					<div class="dashboard-book__book col-xs-12">
+				 		{{> dashboardBook}}
+					</div>
+				{{/with}}
+				{{#with request}}
+					<button class="btn btn-small btn-orange js-dashboard-request-cancel">Cancel request</button>
+				{{/with}}
+			{{else}}
+				<div class="dashboard-your-books__empty">
+					<p>You are not reading any books</p>
+					<a href="{{pathFor 'booksList'}}" class="dashboard-your-books__link">Click here to choose a book</a>
+				</div>
+			{{/if}}
 		{{/if}}
-		{{#with book}}
-			<div class="dashboard-book__book col-xs-12 col-sm-4 col-md-3">
-		 		{{> dashboardBook}}
- 				<button class="btn btn-small btn-orange js-dashboard-return">Return this book</button>
-			</div>
-		{{/with}}
 	</div>
 </template>
