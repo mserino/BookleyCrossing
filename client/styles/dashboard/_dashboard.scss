@@ -83,6 +83,7 @@
 		&__tab-body {
 			border: 1px solid lighten($main-pink, 20%);
 			color: black;
+			min-height: 450px;
 		}
 		&__content {
 			border: 0;
