@@ -3,9 +3,10 @@ if(Meteor.isClient) {
 		'click .js-borrow-book': function(e) {
 			e.preventDefault();
 
-			var book = Books.findOne({_id: this._id});
+			var book = this,
+				user = Meteor.user();
 
-			Meteor.call('requestBook', book, function(error, result) {
+			Meteor.call('requestBook', book, user, function(error, result) {
 				if(error) {
 					FlashMessages.sendError(error.reason, {autohide: false});
 					Router.go('bookAdd');
@@ -17,7 +18,7 @@ if(Meteor.isClient) {
 					FlashMessages.sendError('It looks like you are already borrowing or requesting a book. Please return it before borrowing a new one', { autoHide: true, hideDelay: 5000 });
 				} else {
 					$('.js-borrow-notifications').text('Thank you for requesting this book. Come collect it from the library.');
-					FlashMessages.sendSuccess('Thank you, your request has been sent', {autoHide: true, hideDelay: 5000})
+					FlashMessages.sendSuccess('Thank you, your request has been sent', {autoHide: true, hideDelay: 5000});
 				}
 			});
 		},

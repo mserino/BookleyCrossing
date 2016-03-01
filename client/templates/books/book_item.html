@@ -46,11 +46,11 @@
 				{{/if}}
 			{{else}}
 				{{#if requested}}
-						{{#if isRequesting}}
-							<button class="col-xs-12 book-detail__button book-detail__button--unavailable btn btn-large">Come collect!</button>
-						{{else}}
-							<button class="col-xs-12 book-detail__button book-detail__button--unavailable btn btn-large">Book already requested</button>
-						{{/if}}
+					{{#if isRequesting}}
+						<button class="col-xs-12 book-detail__button book-detail__button--unavailable btn btn-large">Come collect!</button>
+					{{else}}
+						<button class="col-xs-12 book-detail__button book-detail__button--unavailable btn btn-large">Book already requested</button>
+					{{/if}}
 				{{else}}
 					<button class="col-xs-12 book-detail__button book-detail__button--borrow btn btn-large js-borrow-book">Request this book</button>
 				{{/if}}

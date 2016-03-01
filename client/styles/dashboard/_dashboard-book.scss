@@ -12,12 +12,14 @@
 		text-align: center;
 		a {
 			color: $main-black;
-			display: block;
 			margin-bottom: 10px;
 			&:hover, &:focus, &:active {
 				color: $main-pink;
 				text-decoration: none;
 			}
+		}
+		.btn {
+			margin-bottom: 5px;
 		}
 	}
 	&__text {

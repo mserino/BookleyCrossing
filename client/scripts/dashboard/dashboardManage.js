@@ -14,21 +14,30 @@ if(Meteor.isClient) {
 		}
 	});
 
+	Template.dashboardRequest.helpers({
+		user: function() {
+			return Meteor.users.findOne({_id: this.user});
+		},
+		book: function() {
+			return Books.findOne({_id: this.book});
+		}
+	});
+
 	Template.dashboardRequest.events({
 		'click .js-dashboard-request-approve': function(e) {
 			e.preventDefault();
 
-			var book = this.book,
-					user = this.user,
-					request = this;
+			var book = Books.findOne({_id: this.book}),
+				user = Meteor.users.findOne({_id: this.user}),
+				request = this;
 
 			Meteor.call('borrowBook', book, user, request);
 		},
 		'click .js-dashboard-request-decline': function(e) {
 			e.preventDefault();
 
-			var book = this.book,
-				user = this.user,
+			var book = Books.findOne({_id: this.book}),
+				user = Meteor.users.findOne({_id: this.user}),
 				request = this;
 
 			Meteor.call('declineRequest', book, user, request);

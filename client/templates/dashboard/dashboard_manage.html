@@ -11,9 +11,9 @@
 				</h4>
 				<ul class="dashboard__list">
 					{{#if requestsNotEmpty}}
-							{{#each requests}}
-								{{> dashboardRequest}}
-							{{/each}}
+						{{#each requests}}
+							{{> dashboardRequest}}
+						{{/each}}
 					{{else}}
 						<div class="dashboard__item">No pending requests</div>
 					{{/if}}

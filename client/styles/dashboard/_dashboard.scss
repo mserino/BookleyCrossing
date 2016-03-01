@@ -1,5 +1,6 @@
 @import "dashboard-book";
 @import "dashboard-your-books";
+@import "dashboard-wishlist";
 
 .dashboard {
 	padding: 20px;
@@ -28,7 +29,7 @@
 		@include typographyItalic;
 	}
 	&__tab {
-		margin: auto;
+		margin: 0;
 	}
 	&__tabs {
 		background-color: lighten($light-grey, 10%);
@@ -68,7 +69,6 @@
 			background-color: lighten($main-pink, 10%);
 		}
 	}
-
 	&__tab-body {
 		color: $main-pink;
 		padding: 20px;

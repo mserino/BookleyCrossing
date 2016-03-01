@@ -7,7 +7,7 @@ if(Meteor.isClient) {
 			title: $(e.target).find('.js-new-book-title').val(),
 			author: $(e.target).find('.js-new-book-author').val(),
 			cover: $(e.target).find('.js-new-book-cover').val(),
-			description: $(e.target).find('.js-new-book-description').val()	
+			description: $(e.target).find('.js-new-book-description').val()
 		};
 
 			Meteor.call('addBook', book, function(error, result) {
