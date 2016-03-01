@@ -1,0 +1,29 @@
+<template name="dashboardWishlist">
+	<div class="dashboard-wishlist dashboard__tab row">
+	<h3>Your Wishlist</h3>
+		{{#if empty wishlist}}
+			Your wishlist is empty
+		{{/if}}
+		{{#each wishlist}}
+			{{> dashboardWishlistBook}}
+		{{/each}}
+	</div>
+</template>
+
+<template name="dashboardWishlistBook">
+	<div class="dashboard-book__book-container col-xs-12 col-sm-4 col-md-3">
+		<div class="dashboard-book__book">
+			{{> dashboardBook}}
+
+			{{#if isRequestingOrBorrowing}}
+				{{#if requestingThis}}
+					<p class="dashboard-wishlist__requested">You are requesting this book</p>
+				{{/if}}
+			{{else}}
+				<button class="btn btn-small btn-pink js-wishlist-request">Request this book</button>
+			{{/if}}
+
+			<button class="btn btn-small btn-orange js-wishlist-remove">Remove from wishlist</button>
+		</div>
+	</div>
+</template>

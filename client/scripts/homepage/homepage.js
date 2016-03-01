@@ -1,5 +1,0 @@
-Template.homepage.helpers({
-	books: function() {
-		return Books.find({}, {sort: {submitted: -1}, limit: 4});
-	}
-});

@@ -1,0 +1,92 @@
+@import "dashboard-book";
+@import "dashboard-your-books";
+@import "dashboard-wishlist";
+
+.dashboard {
+	padding: 20px;
+	color: $main-white;
+	&__section {
+		padding: 0;
+		margin: 0;
+		padding-bottom: 20px;
+		color: black;
+	}
+	&__section-title {
+		@include typographyBold;
+	}
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	&__item {
+		margin-bottom: 10px;
+	}
+	&__username {
+		@include typographyBold;
+	}
+	&__title {
+		@include typographyItalic;
+	}
+	&__tab {
+		margin: 0;
+	}
+	&__tabs {
+		background-color: lighten($light-grey, 10%);
+	}
+	&__tab-link {
+		background-color: lighten($main-pink, 10%);
+		padding: 10px;
+		color: white;
+		border-bottom: 1px solid lighten($main-pink, 20%);
+		&:hover, &:active, &:focus {
+			color: darken($main-pink, 20%);
+			text-decoration: none;
+		}
+	}
+	&__content {
+		border-radius: 4px;
+		border: 1px solid $main-pink;
+	}
+	&__icon {
+		margin-right: 5px;
+	}
+	.nav-tabs {
+		border: 0;
+		& > li {
+			margin-bottom: 0;
+		}
+		& > li > a {
+			border: 0;
+			color: $dark-grey;
+			&:hover, &:focus, &:active {
+				border: 0;
+				color: $main-pink;
+			}
+		}
+		& > li.active > a {
+			color: $main-white;
+			background-color: lighten($main-pink, 10%);
+		}
+	}
+	&__tab-body {
+		color: $main-pink;
+		padding: 20px;
+		background-color: $main-white;
+		min-height: 450px;
+
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.dashboard {
+		&__tab-body {
+			border: 1px solid lighten($main-pink, 20%);
+			color: black;
+			min-height: 450px;
+		}
+		&__content {
+			border: 0;
+		}
+	}
+}

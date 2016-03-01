@@ -5,7 +5,7 @@
 @import 'globals/colors';
 @import 'globals/typography';
 @import 'globals/fonts';
-@import 'globals/flash-messages';
+@import 'globals/notifications';
 @import 'globals/breakpoints';
 
 // Global body configs
@@ -14,6 +14,7 @@
 /* Components */
 @import 'books/book';
 @import 'books/books-list';
+@import 'dashboard/dashboard';
 
 @import 'homepage/homepage';
 

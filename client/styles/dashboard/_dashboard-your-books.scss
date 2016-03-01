@@ -1,0 +1,20 @@
+.dashboard-your-books {
+	min-height: 450px;
+	text-align: center;
+	display: block;
+	&__link {
+		color: $main-pink;
+		&:hover, &:focus, &:active {
+			color: darken($main-pink, 15%);
+			text-decoration: none;
+		}
+	}
+	&__empty {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		color: $main-black;
+	}
+}

@@ -1,4 +1,9 @@
 body {
+	@include fontSerif;
+	font-size: 1.7rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
 	@include fontSansSerif;
 }
 
@@ -20,9 +25,9 @@ body {
 .container-section {
 	max-width: 500px;
 	left: 50%;
-		-webkit-transform: translateX(-50%);
-		    -ms-transform: translateX(-50%);
-		        transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
 }
 
 @media (min-width: $screen-md-min) {
@@ -34,5 +39,12 @@ body {
 @media (min-width: $screen-lg-min) {
 	.container-section {
 		max-width: 1353px;
+	}
+}
+
+.at-title {
+	h3 {
+		font-size: 24px;
+		font-weight: normal;
 	}
 }

@@ -19,25 +19,43 @@
 				{{/if}}
 			{{/if}}
 
-			<p class="book-detail__synopsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
-		<div class="col-xs-12 col-sm-6 book-detail__button-container">
-			<div class="book-detail__errors js-borrow-errors"></div>
-			{{#if borrowed}}
-				{{#if isBorrowing}}
-					<button class="col-xs-12 book-detail__button book-detail__button--return btn btn-large js-return-book">Return this book</button>
+			{{#if currentUser}}
+				{{#if inWishlist}}
+					<div class="book-detail__wishlist book-detail__wishlist--added col-xs-12 js-wishlist-remove">
+						<i class="fa fa-heart"></i>
+						This book is in your wishlist
+					</div>
 				{{else}}
-					<button class="col-xs-12 book-detail__button book-detail__button--unavailable btn btn-large js-return-book">Book unavailable</button>
+					<div class="book-detail__wishlist col-xs-12 js-wishlist-add">
+						<i class="fa fa-heart-o icon-heart-empty"></i>
+						<i class="fa fa-heart icon-heart-full"></i>
+						Add to your wishlist
+					</div>
 				{{/if}}
-			{{else}}
-				<button class="col-xs-12 book-detail__button book-detail__button--borrow btn btn-large js-borrow-book">Borrow me!</button>
 			{{/if}}
 
+			<p class="book-detail__synopsis">{{description}}</p>
+
+			<div class="book-detail__button-container col-xs-12">
+				<div class="book-detail__errors js-borrow-notifications"></div>
+				{{#if borrowed}}
+					{{#if isBorrowing}}
+						<button class="col-xs-12 book-detail__button book-detail__button--return btn btn-large js-return-book">Return this book</button>
+					{{else}}
+						<button class="col-xs-12 book-detail__button book-detail__button--unavailable btn btn-large">Book unavailable</button>
+					{{/if}}
+				{{else}}
+					{{#if requested}}
+							{{#if isRequesting}}
+								<button class="col-xs-12 book-detail__button book-detail__button--unavailable btn btn-large">Come collect!</button>
+							{{else}}
+								<button class="col-xs-12 book-detail__button book-detail__button--unavailable btn btn-large">Book already requested</button>
+							{{/if}}
+					{{else}}
+						<button class="col-xs-12 book-detail__button book-detail__button--borrow btn btn-large js-borrow-book">Request this book</button>
+					{{/if}}
+				{{/if}}
+			</div>
 		</div>
 	</section>
 </template>

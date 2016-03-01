@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	color: $dark-grey;
+	padding-bottom: 40px;
 
 	&__title {
 		padding: 0 30px;
@@ -14,6 +15,7 @@
 		color: $dark-grey;
 		&:hover {
 			color: darken($main-orange, 20%);
+			text-decoration: none;
 		}
 	}
 }

@@ -2,11 +2,14 @@
 	margin: 0;
 	padding-top: 10px;
 	padding-right: 10px;
+	text-align: right;
+	font-size: 1.5rem;
 
 	&__link {
 		color: $dark-grey;
-		&:hover {
-			color: darken($dark-grey, 20%);
+		&:hover, &:focus, &:active {
+			color: $main-orange;
+			text-decoration: none;
 		}
 	}
 }

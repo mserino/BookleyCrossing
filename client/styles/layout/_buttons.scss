@@ -1,16 +1,61 @@
 .btn {
 	border: 0;
 	font-size: 16px;
+	color: $main-white;
+	@include fontSansSerif;
 
 	&-pink {
+		// !importants to override bootstrap styles
 		background-color: $main-pink;
-		&:hover, &:active, &:focus {
+		&:hover, &:focus{
 			background-color: darken($main-pink, 10%) !important;
 			// !important to override bootstrap styles
+		}
+		&:active {
+			background-color: darken($main-pink, 30%) !important;
+		}
+		&:focus {
+			background-color: $main-pink !important;
+		}
+	}
+
+	&-green {
+		// !importants to override bootstrap styles
+		background-color: $main-green;
+		&:hover {
+			background-color: darken($main-green, 10%) !important;
+		}
+		&:active {
+			background-color: darken($main-green, 30%) !important;
+		}
+		&:focus {
+			background-color: $main-green !important;
+		}
+	}
+
+	&-orange {
+		// !importants to override bootstrap styles
+		background-color: $main-orange;
+		&:hover {
+			background-color: darken($main-orange, 10%) !important;
+		}
+		&:active {
+			background-color: darken($main-orange, 30%) !important;
+		}
+		&:focus {
+			background-color: $main-orange !important;
 		}
 	}
 
 	&-large {
 		min-width: 200px;
+	}
+
+	&-small {
+		font-size: 13px;
+	}
+	&:hover, &:active, &:focus {
+		outline: none !important;
+		color: $main-white;
 	}
 }

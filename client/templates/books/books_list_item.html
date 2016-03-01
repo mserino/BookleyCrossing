@@ -4,8 +4,15 @@
 			<img src="images/{{status}}.png" class="books-list__status" alt="{{status}}"/>
 		{{/if}}
 		<div class="books-list__cover">
-			<a href="{{pathFor 'bookPage'}}">
-				<img src="{{cover}}" alt="{{title}} - {{author}}" class="books-list__cover-image"/>
+			<div class="books-list__cover-container">
+				<a href="{{pathFor 'bookPage'}}" class="books-list__path">
+					<img src="{{cover}}" alt="{{title}} - {{author}}" class="books-list__cover-image"/>
+				</a>
+			</div>
+			<a href="{{pathFor 'bookPage'}}" class="books-list__path">
+				<div class="books-list__description-container">
+						<p class="books-list__description-container-text">{{ trim description 0 180}}</p>
+				</div>
 			</a>
 		</div>
 		<div class="books-list__item">

@@ -1,0 +1,31 @@
+.dashboard-book {
+	&__cover {
+		height: 200px;
+		margin-bottom: 10px;
+		border-radius: 20px;
+	}
+	&__book-container {
+		padding: 10px;
+	}
+	&__book {
+		padding: 15px;
+		text-align: center;
+		a {
+			color: $main-black;
+			margin-bottom: 10px;
+			&:hover, &:focus, &:active {
+				color: $main-pink;
+				text-decoration: none;
+			}
+		}
+		.btn {
+			margin-bottom: 5px;
+		}
+	}
+	&__text {
+		display: block;
+		&--author {
+			@include typographyItalic;
+		}
+	}
+}

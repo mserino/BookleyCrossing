@@ -1,13 +1,14 @@
 .header-title {
-	@include fontHandWriting;
+	@include fontLogo;
+	@include typographyBold;
 	text-align: center;
 	padding: 10px 0;
 	font-size: 2.5rem;
 	position: relative;
 	a {
-		color: $main-black;
+		color: $dark-grey;
 		&:hover, &:focus {
-			color: $main-black;
+			color: $dark-grey;
 			text-decoration: none;
 		}
 	}
@@ -15,8 +16,14 @@
 
 @media (min-width: $screen-sm-min) {
 	.header-title {
-		font-size: 3.5rem;
+		font-size: 3rem;
 		padding: 0;
-		padding-bottom: 30px;
+		padding-bottom: 10px;
+	}
+}
+@media (min-width: $screen-md-min) {
+	.header-title {
+		font-size: 5rem;
+		padding: 10px 0;
 	}
 }
