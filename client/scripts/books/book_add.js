@@ -9,23 +9,24 @@ if(Meteor.isClient) {
 			cover: $(e.target).find('.js-new-book-cover').val(),
 			description: $(e.target).find('.js-new-book-description').val()
 		};
+		var user = Meteor.user();
 
-			Meteor.call('addBook', book, function(error, result) {
-				if (error) {
-					FlashMessages.sendError(error.reason, { autoHide: false });
-					Router.go('bookAdd');
-				}
+		Meteor.call('addBook', book, user, function(error, result) {
+			if (error) {
+				FlashMessages.sendError(error.reason, { autoHide: false });
+				Router.go('bookAdd');
+			}
 
-				if (result.bookExists) {
-					FlashMessages.sendWarning('This book has already been posted', { autoHide: true, hideDelay: 5000 });
-				}
+			if (result.bookExists) {
+				FlashMessages.sendWarning('This book has already been posted', { autoHide: true, hideDelay: 5000 });
+			}
 
-				if (!result.bookExists) {
-					FlashMessages.sendSuccess('Book successfully added to the bookshelf', {autoHide: true, hideDelay: 5000 });
-				}
+			if (!result.bookExists) {
+				FlashMessages.sendSuccess('Book successfully added to the bookshelf', {autoHide: true, hideDelay: 5000 });
+			}
 
-				Router.go('bookPage', {_id: result._id});
-			});
+			Router.go('bookPage', {_id: result._id});
+		});
 		}
 	});
 
