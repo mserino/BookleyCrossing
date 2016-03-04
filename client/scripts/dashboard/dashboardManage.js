@@ -50,6 +50,10 @@ if(Meteor.isClient) {
 		},
 		borrowedOn: function() {
 			return this.borrowedOn.toDateString();
+		},
+		borrowedBy: function() {
+			var user = Meteor.users.findOne({_id: this.borrowedBy});
+			return user;
 		}
 	});
 
