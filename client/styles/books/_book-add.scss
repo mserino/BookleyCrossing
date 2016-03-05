@@ -2,10 +2,16 @@
 	&__title {
 		text-align: center;
 		@include typographyBold;
+		&--italic {
+			@include typographyItalic;
+		}
 	}
 	&__input {
 		&.error {
 			border: 1px solid $main-pink;
+		}
+		&--textarea {
+			resize: none;
 		}
 	}
 	&__controls {
