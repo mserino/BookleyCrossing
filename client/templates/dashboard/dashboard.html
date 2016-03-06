@@ -23,7 +23,7 @@
 			{{#if isInRole 'admin'}}
 				<li role="manage" class="dashboard__tab-heading hidden-xs">
 					<a href="#manage" aria-controls="manage" role="tab" data-toggle="tab">
-						<i class="fa fa-users dashboard__icon"></i>
+						<i class="fa fa-user-secret dashboard__icon"></i>
 						Manage ({{requestsCount}})
 					</a>
 				</li>
@@ -56,7 +56,7 @@
 
 			{{#if isInRole 'admin'}}
 				<a href="#manage" aria-controls="manage" role="tab" data-toggle="tab" class="dashboard__tab-link visible-xs-block">
-					<i class="fa fa-users dashboard__icon"></i>
+					<i class="fa fa-user-secret dashboard__icon"></i>
 					Manage ({{requestsCount}})
 				</a>
 				<div role="tabpanel" class="dashboard__tab-body tab-pane" id="manage">
