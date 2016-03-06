@@ -45,6 +45,27 @@ if(Meteor.isClient) {
 					}
 				});
 			}
+		},
+
+		'click .js-delete-book': function(e) {
+			e.preventDefault();
+			var book = this;
+			
+			BootstrapModalPrompt.prompt({
+		    title: 'Delete',
+		    content: 'Are you sure you want to delete this book?'
+			}, function(result) {
+			  if (result) {
+			    Meteor.call('deleteBook', book, function(error, result) {
+			    	if (error) {
+			    		FlashMessages.sendError(error.reason, {autohide: false});
+			    	} else {
+			    		FlashMessages.sendSuccess('Book successfully deleted', {autoHide: true, hideDelay: 5000});
+			    		Router.go('/');
+			    	}
+			    });
+			  }
+			});
 		}
 	});
 }

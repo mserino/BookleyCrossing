@@ -9,7 +9,9 @@ if(Meteor.isClient) {
 
 			_.forEach(userWishlistId, function(item) {
 				var book = Books.findOne({_id: item});
-				userWishListBooks.push(book);
+				if (book) {
+					userWishListBooks.push(book);
+				}
 			});
 
 			return userWishListBooks;
