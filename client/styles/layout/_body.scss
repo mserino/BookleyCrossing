@@ -48,3 +48,23 @@ h1, h2, h3, h4, h5, h6 {
 		font-weight: normal;
 	}
 }
+
+.modal-backdrop.in {
+	z-index: -1;
+}
+.modal-btn-dismiss {
+	background-color: $main-orange;
+	&:hover, &:active, &:focus {
+		background-color: darken($main-orange, 10%);
+	}
+}
+.modal-btn-confirm {
+	background-color: $main-pink;
+	&:hover, &:active, &:focus {
+		background-color: darken($main-pink, 10%);
+	}
+}
+.modal-title {
+	@include typographyBold;
+	color: $main-pink;
+}
