@@ -74,6 +74,23 @@
 		color: $main-pink;
 		margin-bottom: 10px;
 	}
+	&__admin {
+		padding: 0;
+		margin: 0;
+		&--title {
+			padding: 0;
+			@include typographyBold;
+		}
+		&--action, &--link {
+			color: $main-pink;
+			padding: 0;
+			cursor: pointer;
+			&:hover, &:focus, &:active {
+				text-decoration: none;
+				color: darken($main-pink, 20%);
+			}
+		}
+	}
 }
 
 @media (min-width: $screen-md-min) {

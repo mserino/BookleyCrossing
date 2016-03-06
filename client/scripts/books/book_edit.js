@@ -18,9 +18,8 @@ if (Meteor.isClient) {
 					Router.go('editBook');
 				} else {
 					FlashMessages.sendSuccess('Your changes have been saved', {autoHide: true, hideDelay: 5000 });
+					Router.go('bookPage', {_id: result._id});
 				}
-
-				Router.go('bookPage', {_id: result._id});
 			});
 		}
 	});

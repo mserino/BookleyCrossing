@@ -56,13 +56,14 @@
 					{{/if}}
 				{{/if}}
 			</div>
-		</div>
-		<div class="col-xs-12">
-		<ul>
-			<li>Admin actions:</li>
-			<li><a href="{{pathFor 'editBook'}}">Edit</a></li>
-			<li class="js-book-delete">Delete</li>
-		</ul>
+
+			{{#if isInRole 'admin'}}
+				<ul class="book-detail__admin col-xs-12 list-unstyled list-inline">
+					<li class="book-detail__admin--title">Admin actions:</li>
+					<li class="book-detail__admin--action"><a href="{{pathFor 'editBook'}}" class="book-detail__admin--link">Edit</a></li>
+					<li class="book-detail__admin--action js-book-delete">Delete</li>
+				</ul>
+			{{/if}}
 		</div>
 	</section>
 </template>

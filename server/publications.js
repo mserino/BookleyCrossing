@@ -5,3 +5,7 @@ Meteor.publish('books', function() {
 Meteor.publish('requests', function() {
 	return Requests.find();
 });
+
+Meteor.publish('roles', function (){ 
+    return Meteor.roles.find({});
+});
