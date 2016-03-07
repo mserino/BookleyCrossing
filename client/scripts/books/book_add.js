@@ -45,13 +45,6 @@ if(Meteor.isClient) {
 	    		author: {
 	    			required: true,
 	    			minlength: 3
-<<<<<<< HEAD
-=======
-	    		},
-	    		cover: {
-	    			required: true,
-	    			minlength: 5
->>>>>>> 09528d26a2e7bb8e33bc1fedcfc9536035845dcb
 	    		}
 	    	}
 	    });
