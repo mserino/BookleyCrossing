@@ -1,9 +1,11 @@
 <template name="bookAdd">
 	<section class="book-add col-xs-12 col-sm-5 col-centered">
 		<h3 class="book-add__title">Add a book</h3>
+		<p class="book-add__message">Please add a book only if you are going to donate it to the library.</p>
+		<p class="book-add__message">Requests or suggestions are going to be implemented in a future release.</p>
 		<form class="js-book-add-form">
 			<div class="form-group">
-				<label class="control-label" for="title">Title</label>
+				<label class="control-label book-add__label" for="title">Title</label>
 				<div class="controls book-add__controls">
 					<input name="title"
 								 id="title"
@@ -15,7 +17,7 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="control-label" for="author">Author</label>
+				<label class="control-label book-add__label" for="author">Author</label>
 				<div class="controls book-add__controls">
 					<input name="author"
 								 id="author"
@@ -27,7 +29,7 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="control-label" for="cover">Cover url</label>
+				<label class="control-label book-add__label" for="cover">Cover url</label>
 				<div class="controls book-add__controls">
 					<input name="cover"
 							   id="cover"
@@ -39,7 +41,7 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="control-label" for="description">Description</label>
+				<label class="control-label book-add__label" for="description">Description</label>
 				<div class="controls book-add__controls">
 					<textarea
 						class="form-control js-new-book-description form-control book-add__input book-add__input--textarea"

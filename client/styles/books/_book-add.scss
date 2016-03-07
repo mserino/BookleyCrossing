@@ -1,10 +1,6 @@
 .book-add {
 	&__title {
 		text-align: center;
-		@include typographyBold;
-		&--italic {
-			@include typographyItalic;
-		}
 	}
 	&__input {
 		&.error {
@@ -19,5 +15,13 @@
 			margin-top: 5px;
 			color: $main-pink;
 		}
+	}
+	&__label {
+		font-weight: inherit;
+		font-size: 14px;
+	}
+	&__message {
+		color: $main-pink;
+		text-align: center;
 	}
 }
