@@ -1,10 +1,11 @@
 .book-detail {
 	padding: 20px 10px;
 	&__image {
-		height: 500px;
+		height: 300px;
 		text-align: center;
 		padding: 10px;
 		img {
+			width: 210px;
 			height: 100%;
 			border-radius: 10px;
 		}
@@ -93,8 +94,25 @@
 	}
 }
 
+@media (min-width: $screen-sm-min) {
+	.book-detail {
+		&__image {
+			height: 400px;
+			img {
+				width: 280px;
+			}
+		}
+	}
+}
+
 @media (min-width: $screen-md-min) {
 	.book-detail {
+		&__image {
+			height: 450px;
+			img {
+				width: 320px;
+			}
+		}
 		&__wishlist {
 			text-align: left;
 			&:hover {
