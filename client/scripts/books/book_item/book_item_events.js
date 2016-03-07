@@ -50,7 +50,7 @@ if(Meteor.isClient) {
 		'click .js-delete-book': function(e) {
 			e.preventDefault();
 			var book = this;
-			
+
 			BootstrapModalPrompt.prompt({
 		    title: 'Delete',
 		    content: 'Are you sure you want to delete this book?'

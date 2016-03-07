@@ -6,6 +6,6 @@ Meteor.publish('requests', function() {
 	return Requests.find();
 });
 
-Meteor.publish('roles', function (){ 
+Meteor.publish('roles', function (){
     return Meteor.roles.find({});
 });

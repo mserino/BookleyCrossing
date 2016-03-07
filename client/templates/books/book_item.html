@@ -7,7 +7,6 @@
 			<h1 class="book-detail__title">{{title}}</h1>
 			<p class="book-detail__author">{{author}}</p>
 			<p class="book-detail__addedby">Added by {{user.username}} on {{submitted}}</p>
-
 			{{#if borrowed}}
 				{{#if isBorrowing}}
 					<p class="book-detail__borrowing">You are reading this book since {{borrowedOn}}</p>
@@ -70,8 +69,4 @@
 			{{/if}}
 		</div>
 	</section>
-</template>
-
-<template name="deleteBook">
-	Delete
 </template>
