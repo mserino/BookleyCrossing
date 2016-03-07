@@ -41,7 +41,7 @@
 		&-links {
 			color: white;
 			padding-bottom: 15px;
-			&:hover {
+			&:hover, &:focus, &:active {
 				color: $light-grey;
 				text-decoration: none
 			}
