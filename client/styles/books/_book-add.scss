@@ -16,9 +16,12 @@
 			color: $main-pink;
 		}
 	}
-
 	&__label {
 		font-weight: inherit;
 		font-size: 14px;
+	}
+	&__message {
+		color: $main-pink;
+		text-align: center;
 	}
 }
