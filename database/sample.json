@@ -1,0 +1,14 @@
+{
+   "_id":"",
+   "title":"",
+   "author":"",
+   "cover":"",
+   "description":"",
+   "addedBy":"",
+   "submitted":{
+      "$date":"2016-03-07T17:26:59.322Z"
+   },
+   "borrowedBy":"",
+   "borrowedOn":"",
+   "requestedBy":""
+}
