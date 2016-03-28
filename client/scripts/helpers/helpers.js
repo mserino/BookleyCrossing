@@ -35,7 +35,7 @@ if(Meteor.isClient) {
 		var today = new Date(),
 			timeDiff = Math.floor((today - date) / (1000*60*60*24));
 
-		if (timeDiff < 10) {
+		if (timeDiff < 3) {
 			return true;
 		}
 		return false;

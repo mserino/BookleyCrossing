@@ -11,6 +11,10 @@
 	&__main {
 		padding: 0 20px;
 		margin: 0;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+				transform: translateX(-50%);
 	}
 
 	&__section {
