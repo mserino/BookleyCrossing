@@ -11,5 +11,8 @@ Accounts.onCreateUser(function(options, user) {
 });
 
 Meteor.publish('userData', function() {
-  return Meteor.users.find();
+	return Meteor.users.find({}, 
+		{fields: 
+			{'_id': 1, 'username': 1, 'borrowing': 1, 'requesting': 1, 'wishlist': 1}
+		});
 });
