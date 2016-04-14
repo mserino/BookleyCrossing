@@ -5,6 +5,7 @@ if(Meteor.isClient) {
 	Template.dashboardYourBooks.helpers({
 		book: function() {
 			var user = Meteor.user();
+			console.log(user);
 			return Books.findOne({_id: user.borrowing});
 		},
 		request: function() {
