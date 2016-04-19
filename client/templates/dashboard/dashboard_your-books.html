@@ -26,5 +26,20 @@
 				</div>
 			{{/if}}
 		{{/if}}
+		{{#if records}}
+			<div class="dashboard-your-books__reading-history">
+				<h3>Reading History</h3>
+				{{#each records}}
+					<div class="dashboard-book__book-container col-xs-12 col-sm-4 col-md-3">
+						<div class="dashboard-book__book">
+							{{#with recordBook bookId}}
+								{{> dashboardBook}}
+							{{/with}}
+							<span class="dashboard-book__record-date">from {{toDate from}} to {{toDate to}}</span>
+						</div>
+					</div>
+				{{/each}}
+			</div>
+		{{/if}}
 	</div>
 </template>
