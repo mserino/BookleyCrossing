@@ -47,7 +47,7 @@
 <template name="dashboardManageBook">
 	{{#if borrowed}}
 		<li class="dashboard__item">
-		<span class="dashboard__username">{{borrowedBy.username}}</span> is reading <span class="dashboard__title">{{title}}</span> since {{borrowedOn}}
+		<span class="dashboard__username">{{borrowedBy.username}}</span> is reading <span class="dashboard__title">{{title}}</span> since {{convertDate borrowedOn}}
 		<div>
 			<button class="btn btn-small btn-pink js-dashboard-force-return">Force Return</button>
 		</div>

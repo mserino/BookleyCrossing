@@ -48,9 +48,6 @@ if(Meteor.isClient) {
 		borrowed: function() {
 			return this.borrowedBy !== '';
 		},
-		borrowedOn: function() {
-			return this.borrowedOn.toDateString();
-		},
 		borrowedBy: function() {
 			var user = Meteor.users.findOne({_id: this.borrowedBy});
 			return user;

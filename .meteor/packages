@@ -30,3 +30,4 @@ useraccounts:iron-routing
 themeteorchef:jquery-validation
 alanning:roles
 theduke:bootstrap-modal-prompt
+momentjs:moment@=2.12.0

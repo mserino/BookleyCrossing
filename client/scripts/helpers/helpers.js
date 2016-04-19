@@ -22,6 +22,10 @@ if(Meteor.isClient) {
 		return status;
 	});
 
+	Template.registerHelper('convertDate', function(timestamp) {
+    	return moment(timestamp).format('Do MMMM YYYY');
+	});
+
 	Handlebars.registerHelper('trim', function(passedString, startstring, endstring) {
 		 var theString = passedString.substring( startstring, endstring );
 		 return new Handlebars.SafeString(theString) + "...";

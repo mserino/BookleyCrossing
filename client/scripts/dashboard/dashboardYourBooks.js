@@ -26,9 +26,6 @@ if(Meteor.isClient) {
 			if (bookId) {
 				return Books.findOne({_id: bookId});
 			}
-		},
-		toDate: function(date) {
-			return date.toDateString();
 		}
 	});
 
