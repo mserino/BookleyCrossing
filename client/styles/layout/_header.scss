@@ -152,5 +152,64 @@
 				color: darken($main-orange, 10%);
 			}
 		}
+
+		&__search {
+			background-color: $main-green;
+			padding: 5px 10px;
+    	border-radius: 15px;
+    	cursor: pointer;
+   		position: relative;
+   		
+			&:before {
+			  position: absolute;
+		    font-family: 'FontAwesome';
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    content: "\f002";
+		    color: $main-white;
+			}
+		}
+
+		&__search-input {
+			position: relative;
+			outline: none;
+			border: 0;
+			width: 30px;
+			padding-left: 30px;
+			color: transparent;
+			background-color: transparent;
+			cursor: pointer;
+			-webkit-border-radius: 15px;
+			-moz-border-radius: 15px;
+			border-radius: 15px;
+			
+			-webkit-transition: all .5s;
+			-moz-transition: all .5s;
+			transition: all .5s;
+
+			&:focus {
+				width: 130px;
+				padding-left: 32px;
+				cursor: auto;
+				color: $main-white;
+				background-color: $main-green;
+			}
+		}
+		::-webkit-input-placeholder {
+			color: $main-white;
+		}
+
+		:-moz-placeholder { /* Firefox 18- */
+			color: $main-white;  
+		}
+
+		::-moz-placeholder {  /* Firefox 19+ */
+			color: $main-white;  
+		}
+
+		:-ms-input-placeholder {  
+			color: $main-white;  
+		}
 	}
 }
