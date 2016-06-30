@@ -9,3 +9,7 @@ Meteor.publish('requests', function() {
 Meteor.publish('roles', function (){
     return Meteor.roles.find({});
 });
+
+Meteor.publish('history', function() {
+	return History.find();
+});

@@ -3,9 +3,6 @@ if(Meteor.isClient) {
 	Meteor.subscribe('userData');
 
 	Template.bookItem.helpers({
-		submitted: function() {
-			return this.submitted.toDateString();
-		},
 		user: function() {
 			var addedBy = this.addedBy;
 			var user = Meteor.users.findOne({_id: addedBy});
@@ -16,9 +13,6 @@ if(Meteor.isClient) {
 				var user = Meteor.users.findOne({_id: this.borrowedBy});
 				return user;
 			}
-		},
-		borrowedOn: function() {
-			return this.borrowedOn.toDateString();
 		},
 		isBorrowing: function() {
 			if (this.borrowedBy) {
@@ -55,6 +49,20 @@ if(Meteor.isClient) {
 					return true;
 				}
 			}
+		},
+		records: function() {
+			var records = History.find({bookId: this._id}).fetch();
+			return records;
+		},
+		recordUser: function(userId) {
+			if (userId) {
+				return Meteor.users.findOne({_id: userId});
+			}
+		},
+		difference: function() {
+			var firstDay = this.from,
+				lastDay = this.to;
+			return moment(lastDay).diff(moment(firstDay), 'days');
 		}
 	});
 }

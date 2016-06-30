@@ -1,6 +1,7 @@
 if(Meteor.isClient) {
 	Meteor.subscribe('books');
 	Meteor.subscribe('userData');
+	Meteor.subscribe('history');
 
 	Template.dashboardYourBooks.helpers({
 		book: function() {
@@ -14,6 +15,16 @@ if(Meteor.isClient) {
 		requestBook: function(request) {
 			if (request) {
 				return Books.findOne({_id: request.book});
+			}
+		},
+		records: function() {
+			var user = Meteor.user(),
+				records = History.find({userId: user._id}).fetch();
+			return records;
+		},
+		recordBook: function(bookId) {
+			if (bookId) {
+				return Books.findOne({_id: bookId});
 			}
 		}
 	});

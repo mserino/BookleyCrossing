@@ -28,4 +28,9 @@
 			@include typographyItalic;
 		}
 	}
+	&__record-date {
+		font-size: 1.35rem;
+		@include typographyBold;
+		color: $main-black;
+	}
 }

@@ -43,14 +43,8 @@ if(Meteor.isClient) {
 	});
 
 	Template.dashboardWishlistBook.helpers({
-		isRequestingOrBorrowing: function() {
-			var user = Meteor.user();
-
-			return user.borrowing !== '' || user.requesting !== '';
-		},
-		requestingThis: function() {
-			var user = Meteor.user();
-			return (user.requesting === this._id);
+		bookAlreadyRequestedorBorrowed: function() {
+			return this.borrowedBy !== '' || this.requestedBy !== '';
 		}
 	});
 }
