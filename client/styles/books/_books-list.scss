@@ -12,6 +12,10 @@
 		text-align: center;
 		padding: 5px 0;
 		min-height: 60px;
+		line-height: 1;
+		overflow:hidden; 
+    white-space:nowrap; 
+    text-overflow: ellipsis;
 	}
 
 	&__cover {
