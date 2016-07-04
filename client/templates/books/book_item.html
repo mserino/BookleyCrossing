@@ -1,5 +1,5 @@
 <template name="bookItem">
-	<section class="book-detail container-section col-xs-12 col-md-9 row">
+	<section class="book-detail container-section col-xs-12 col-md-9">
 		<div class="col-xs-12 col-sm-6 book-detail__image">
 			<img src="{{cover}}" alt="{{title}} - {{author}}"/>
 		</div>
@@ -70,25 +70,7 @@
 		</div>
 	</section>
 
-	<section class="book-tabs container-section col-xs-12 col-md-9 row">
-		<ul class="book-tabs__headings col-xs-12 col-md-8 container-section">
-			<li class="book-tabs__heading">Reading History</li>
-		</ul>
-		<div class="book-tabs__container col-xs-12 col-md-8 container-section">
-			<div class="book-history">
-				{{#if records}}
-					{{#each records}}
-						<div class="book-history__user">
-							<span class="book-history__username">{{#with recordUser userId}}{{username}}{{/with}}</span>
-							from {{convertDate from}} to {{convertDate to}} ({{difference}} days)
-						</div>
-					{{/each}}
-				{{else}}
-					<div class="book-history__user">
-						This book hasn't been borrowed yet.
-					</div>
-				{{/if}}
-			</div>
-		</div>
+	<section class="book-tabs container-section col-xs-12 col-md-9">
+		{{> bookTabs}}
 	</section>
 </template>

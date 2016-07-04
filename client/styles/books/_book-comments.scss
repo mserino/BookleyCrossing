@@ -1,0 +1,37 @@
+.book-comments {
+  &__container {
+    padding: 10px 0;
+  }
+  &__author {
+    @include fontSansSerif;
+  }
+  &__name {
+    @include typographyBold;
+  }
+  &__input {
+    &--textarea {
+      resize: none;
+      width: 50%;
+    }
+  }
+  &__button {
+    width: 50%;
+    margin: 10px 0;
+    background-color: $main-green;
+    &:hover, &:focus {
+      background-color: darken($main-green, 10%);
+    }
+  }
+  &__text-container {
+    display: none;
+  }
+  &__stars {
+    margin: 10px 0;
+    & .current-rating {
+      color: $main-orange;
+    }
+    & .active {
+      color: darken($main-orange, 10%);
+    }
+  }
+}

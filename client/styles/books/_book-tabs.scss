@@ -1,22 +1,67 @@
 .book-tabs {
+  padding: 30px 10px;
+  &__container {
+    border: 1px solid $main-green;
+    padding: 0;
+    min-height: 200px;
+  }
+  &__headings {
+    padding: 0;
+    margin: 0;
+    z-index: 999;
+  }
+  &__heading {
+    display: inline-block;
+    margin-top: 0;
+    padding: 0;
+  }
+  &__heading-link {
+    background-color: $main-green;
+    padding: 10px;
+    color: $main-white;
+    border-bottom: 1px solid $main-green;
+    &:hover, &:active, &:focus {
+      color: darken($main-green, 20%);
+      text-decoration: none;
+    }
+  }
+  .nav-tabs {
+    border: 0;
+    & > li {
+      margin-bottom: 0;
+    }
+    & > li > a {
+      border: 0;
+      color: $dark-grey;
+      &:hover, &:focus, &:active {
+        border: 0;
+        color: $main-green;
+      }
+    }
+    & > li.active > a {
+      color: $main-white;
+      background-color: $main-green;
+    }
+  }
+  &__tab-body {
+    padding: 20px;
+    background-color: $main-white;
+    min-height: 200px;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .book-tabs {
     padding: 30px 0;
-    &__container {
-        border: 1px solid $main-green;
-        padding: 20px;
-        min-height: 200px;
+    &__heading-link {
+      background-color: $main-white;
+      padding: 10px;
+      color: black;
+      border-bottom: 1px solid $main-green;
+      &:hover, &:active, &:focus {
+        color: darken($main-green, 20%);
+        text-decoration: none;
+      }
     }
-    &__headings {
-        padding: 0;
-        margin: 0;
-        z-index: 999;
-    }
-    &__heading {
-        display: inline-block;
-        margin-top: 0;
-        border: 1px solid $main-green;
-        background-color: $main-green;
-        padding: 10px 20px;
-        border-radius: 4px 4px 0 0;
-        color: $main-white;
-    }
+  }
 }
