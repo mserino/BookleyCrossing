@@ -1,9 +1,10 @@
 <template name="bookTabsComments">
   <div class="book-comments">
-    <div class="book-comments__container">
+    <div class="book-comments__container col-xs-12 col-sm-6">
       <button class="btn btn-large book-comments__button js-book-tabs-comment-add">Add a comment</button>
       <div class="book-comments__text-container js-book-tabs-comment-add-container">
         {{> starsRating id='rating' class='book-comments__stars' size='lg' mutable=true}}
+        <i class="fa fa-times fa-2x js-book-tabs-comment-add-close" aria-hidden="true"></i>
         <textarea
           class="form-control js-book-comments-text form-control book-comments__input book-comments__input--textarea"
           rows="5"
@@ -11,7 +12,7 @@
         <button class="btn btn-large book-comments__button js-book-tabs-comment-submit">Submit</button>
       </div>
     </div>
-    <div class="book-comments__container">
+    <div class="book-comments__container col-xs-12">
       <div class="book-comments__author">
         <span class="book-comments__name">Maggie</span> on 4th July 2016
       </div>

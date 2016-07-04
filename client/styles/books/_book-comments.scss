@@ -11,11 +11,11 @@
   &__input {
     &--textarea {
       resize: none;
-      width: 50%;
+      width: 100%;
     }
   }
   &__button {
-    width: 50%;
+    width: 100%;
     margin: 10px 0;
     background-color: $main-green;
     &:hover, &:focus {
@@ -27,11 +27,24 @@
   }
   &__stars {
     margin: 10px 0;
+    display: inline-block;
     & .current-rating {
       color: $main-orange;
     }
     & .active {
       color: darken($main-orange, 10%);
+    }
+  }
+  .fa-times {
+    cursor: pointer;
+    float: right;
+    top: 15px;
+    right: 5px;
+    position: relative;
+    color: $light-grey;
+    font-size: 1.5em;
+    &:hover {
+      color: darken($light-grey, 10%);
     }
   }
 }

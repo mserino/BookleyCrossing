@@ -7,6 +7,11 @@ if(Meteor.isClient) {
       $('.js-book-tabs-comment-add').hide();
       $('.js-book-tabs-comment-add-container').show();
     },
+    'click .js-book-tabs-comment-add-close': function(e) {
+      e.preventDefault();
+      $('.js-book-tabs-comment-add').show();
+      $('.js-book-tabs-comment-add-container').hide();
+    },
     'click .js-book-tabs-comment-submit': function(e) {
       console.log($('#rating').data('userrating'));
     }
