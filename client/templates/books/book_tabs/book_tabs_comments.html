@@ -16,20 +16,26 @@
         </form>
       </div>
     {{/if}}
-    {{#each comments}}
+    {{#if comments}}
+      {{#each comments}}
+        <div class="book-comments__container col-xs-12">
+          <div class="book-comments__author">
+            <span class="book-comments__name">{{#with commentUser userId}}{{username}}{{/with}}</span> on {{convertDate submitted}}
+          </div>
+          <div class="book-comments__stars">
+            {{#with stars}}
+              {{> starsRating class='book-stars' rating=this size='md'}}
+            {{/with}}
+          </div>
+          <div class="book-comments__comment">
+            {{comment}}
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
       <div class="book-comments__container col-xs-12">
-        <div class="book-comments__author">
-          <span class="book-comments__name">{{#with commentUser userId}}{{username}}{{/with}}</span> on {{convertDate submitted}}
-        </div>
-        <div class="book-comments__stars">
-          {{#with stars}}
-            {{> starsRating class='book-stars' rating=this size='md'}}
-          {{/with}}
-        </div>
-        <div class="book-comments__comment">
-          {{comment}}
-        </div>
+        No comment has been added yet.
       </div>
-    {{/each}}
+    {{/if}}
   </div>
 </template>

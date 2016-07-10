@@ -34,7 +34,7 @@ if(Meteor.isClient) {
 
 	Template.bookTabsComments.helpers({
 		comments: function() {
-			return Comments.find({bookId: this._id}).fetch();
+			return Comments.find({bookId: this._id}, {sort: {submitted: -1}}).fetch();
 		},
 		commentUser: function(userId) {
 			if (userId) {

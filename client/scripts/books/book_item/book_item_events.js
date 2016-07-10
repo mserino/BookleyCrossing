@@ -28,7 +28,7 @@ if(Meteor.isClient) {
 			var book = Books.findOne({_id: this._id});
 
 			Meteor.call('returnBook', book, function(error, result) {
-				FlashMessages.sendSuccess('Thank you!', {autoHide: true, hideDelay: 5000});
+				FlashMessages.sendSuccess('Thank you! Did you like the book? Why not leaving a <a href="#commentsTarget">comment</a>?', {autoHide: true, hideDelay: 5000});
 			});
 		},
 

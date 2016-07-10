@@ -4,7 +4,7 @@ if(Meteor.isClient) {
 
 	Template.bookTabsReadingHistory.helpers({
 		records: function() {
-			var records = History.find({bookId: this._id}).fetch();
+			var records = History.find({bookId: this._id}, {sort: {submitted: -1}}).fetch();
 			return records;
 		},
 		recordUser: function(userId) {
