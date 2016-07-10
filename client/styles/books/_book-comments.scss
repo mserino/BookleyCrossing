@@ -1,6 +1,11 @@
 .book-comments {
   &__container {
     padding: 10px 0;
+    &:last-of-type {
+      .book-comments__comment {
+        border: none;
+      }
+    }
   }
   &__author {
     @include fontSansSerif;
@@ -13,6 +18,9 @@
       resize: none;
       width: 100%;
     }
+		&.error {
+			border: 1px solid $main-pink;
+		}
   }
   &__button {
     width: 100%;
@@ -24,27 +32,29 @@
   }
   &__text-container {
     display: none;
+    .error {
+      margin-top: 5px;
+      color: $main-pink;
+    }
+  }
+  &__text-stars {
+    margin-bottom: 10px;
   }
   &__stars {
-    margin: 10px 0;
+    margin-top: 10px;
     display: inline-block;
-    & .current-rating {
-      color: $main-orange;
-    }
-    & .active {
-      color: darken($main-orange, 10%);
-    }
   }
-  .fa-times {
+  &__close {
     cursor: pointer;
-    float: right;
-    top: 15px;
-    right: 5px;
     position: relative;
     color: $light-grey;
-    font-size: 1.5em;
+    font-size: 15px;
     &:hover {
       color: darken($light-grey, 10%);
     }
+  }
+  &__comment {
+    padding-bottom: 20px;
+    border-bottom: 1px solid $light-grey;
   }
 }

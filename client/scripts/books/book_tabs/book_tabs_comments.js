@@ -1,36 +1,63 @@
 if(Meteor.isClient) {
 	Meteor.subscribe('books');
 	Meteor.subscribe('userData');
-  Template.bookItem.events({
+	Meteor.subscribe('comments');
+
+  Template.bookTabsComments.events({
     'click .js-book-tabs-comment-add': function(e) {
       e.preventDefault();
       $('.js-book-tabs-comment-add').hide();
-      $('.js-book-tabs-comment-add-container').show();
+      $('.js-book-tabs-comment-add-form').show();
     },
     'click .js-book-tabs-comment-add-close': function(e) {
       e.preventDefault();
       $('.js-book-tabs-comment-add').show();
-      $('.js-book-tabs-comment-add-container').hide();
+      $('.js-book-tabs-comment-add-form').hide();
     },
-    'click .js-book-tabs-comment-submit': function(e) {
-      console.log($('#rating').data('userrating'));
+    'submit .js-book-tabs-comment-add-form': function(e) {
+			e.preventDefault();
+			var bookId = this._id;
+
+			var commentObject = {
+				bookId: bookId,
+				userId: Meteor.user()._id,
+				stars: $('#rating').data('userrating'),
+				comment: $('.js-book-comments-text').val(),
+				submitted: new Date()
+			}
+
+			Meteor.call('addComment', commentObject, bookId, function() {
+				FlashMessages.sendSuccess('Comment successfully added', {autoHide: true, hideDelay: 5000});
+			});
     }
   });
 
 	Template.bookTabsComments.helpers({
-		records: function() {
-			var records = History.find({bookId: this._id}).fetch();
-			return records;
+		comments: function() {
+			return Comments.find({bookId: this._id}).fetch();
 		},
-		recordUser: function(userId) {
+		commentUser: function(userId) {
 			if (userId) {
 				return Meteor.users.findOne({_id: userId});
 			}
 		},
-		difference: function() {
-			var firstDay = this.from,
-				lastDay = this.to;
-			return moment(lastDay).diff(moment(firstDay), 'days');
+		userHasNotCommented: function() {
+			var user = Meteor.user();
+			if (user) {
+				var comments = Comments.find({$and: [{bookId: this._id}, {userId: user._id}]}).fetch();
+				return comments.length < 1;
+			}
 		}
+	});
+
+	Template.bookTabsComments.onRendered(function(){
+	    $('.js-book-tabs-comment-add-form').validate({
+	    	rules: {
+	    		name: {
+	    			required: true,
+	    			minlength: 3
+	    		}
+	    	}
+	    });
 	});
 }

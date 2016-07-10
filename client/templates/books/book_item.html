@@ -4,6 +4,14 @@
 			<img src="{{cover}}" alt="{{title}} - {{author}}"/>
 		</div>
 		<div class="col-xs-12 col-sm-6 book-detail__description">
+			<a href="#commentsTarget" class="book-detail__stars">
+				{{#with starRating this}}
+					{{> starsRating rating=this class='book-stars'  size='lg'}}
+				{{/with}}
+				{{#if this.stars.length}}
+					<span class="book-detail__stars--length">({{this.stars.length}} comments)</span>
+				{{/if}}
+			</a>
 			<h1 class="book-detail__title">{{title}}</h1>
 			<p class="book-detail__author">{{author}}</p>
 			<p class="book-detail__addedby">Added by {{user.username}} on {{convertDate submitted}}</p>

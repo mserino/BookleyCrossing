@@ -1,21 +1,22 @@
 <template name="bookTabs">
   <ul class="book-tabs__headings col-xs-12 col-md-8 container-section nav nav-tabs" role="tablist">
     <li class="book-tabs__heading hidden-xs active" role="presentation">
-      <a href="#comments" aria-control="comments" role="tab" data-toggle="tab" class="book-tabs__heading-link">Comments</a>
+      <a href="#comments" aria-control="comments" role="tab" data-toggle="tab" class="book-tabs__heading-link active">Comments</a>
     </li>
     <li class="book-tabs__heading hidden-xs" role="presentation">
       <a href="#reading-history" aria-controls="reading-history" role="tab" data-toggle="tab" class="book-tabs__heading-link">Reading History</a>
     </li>
   </ul>
 
+  <a id="commentsTarget"></a>
   <div class="tab-content book-tabs__container col-xs-12 col-md-8 container-section">
-    <a href="#comments" aria-controls="comments" role="tab" data-toggle="tab" class="book-tabs__heading-link visible-xs-block active">Comments</a>
-    <div class="tab-pane book-tabs__tab-body active" role="tabpanel" id="comments">
+    <a href="#comments" aria-controls="comments" role="tab" data-toggle="tab" class="book-tabs__heading-link visible-xs-block col-xs-12 active">Comments</a>
+    <div class="tab-pane book-tabs__tab-body col-xs-12 active" role="tabpanel" id="comments">
       {{> bookTabsComments}}
     </div>
 
-    <a href="#reading-history" aria-controls="reading-history" role="tab" data-toggle="tab" class="book-tabs__heading-link visible-xs-block active">Reading History</a>
-    <div class="tab-pane book-tabs__tab-body" role="tabpanel" id="reading-history">
+    <a href="#reading-history" aria-controls="reading-history" role="tab" data-toggle="tab" class="book-tabs__heading-link visible-xs-block col-xs-12">Reading History</a>
+    <div class="tab-pane book-tabs__tab-body col-xs-12" role="tabpanel" id="reading-history">
       {{> bookTabsReadingHistory}}
     </div>
   </div>

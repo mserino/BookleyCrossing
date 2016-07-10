@@ -1,27 +1,35 @@
 <template name="bookTabsComments">
   <div class="book-comments">
-    <div class="book-comments__container col-xs-12 col-sm-6">
-      <button class="btn btn-large book-comments__button js-book-tabs-comment-add">Add a comment</button>
-      <div class="book-comments__text-container js-book-tabs-comment-add-container">
-        {{> starsRating id='rating' class='book-comments__stars' size='lg' mutable=true}}
-        <i class="fa fa-times fa-2x js-book-tabs-comment-add-close" aria-hidden="true"></i>
-        <textarea
-          class="form-control js-book-comments-text form-control book-comments__input book-comments__input--textarea"
-          rows="5"
-          id="comments-text"></textarea>
-        <button class="btn btn-large book-comments__button js-book-tabs-comment-submit">Submit</button>
+    {{#if userHasNotCommented}}
+      <div class="book-comments__container col-xs-12 col-sm-6">
+        <button class="btn btn-large book-comments__button js-book-tabs-comment-add">Add a comment</button>
+        <form class="book-comments__text-container js-book-tabs-comment-add-form">
+          {{> starsRating id='rating' class='book-stars book-comments__text-stars' size='lg' mutable=true}}
+          <textarea
+            name="comment"
+            class="form-control js-book-comments-text form-control book-comments__input book-comments__input--textarea"
+            rows="5"
+            id="comments-text"
+            required></textarea>
+          <button class="btn btn-large book-comments__button js-book-tabs-comment-submit" type="submit">Submit</button>
+          <span class="book-comments__close js-book-tabs-comment-add-close">Cancel</span>
+        </form>
       </div>
-    </div>
-    <div class="book-comments__container col-xs-12">
-      <div class="book-comments__author">
-        <span class="book-comments__name">Maggie</span> on 4th July 2016
+    {{/if}}
+    {{#each comments}}
+      <div class="book-comments__container col-xs-12">
+        <div class="book-comments__author">
+          <span class="book-comments__name">{{#with commentUser userId}}{{username}}{{/with}}</span> on {{convertDate submitted}}
+        </div>
+        <div class="book-comments__stars">
+          {{#with stars}}
+            {{> starsRating class='book-stars' rating=this size='md'}}
+          {{/with}}
+        </div>
+        <div class="book-comments__comment">
+          {{comment}}
+        </div>
       </div>
-      <div class="book-comments__stars">
-        ***
-      </div>
-      <div class="book-comments__comment">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </div>
-    </div>
+    {{/each}}
   </div>
 </template>
