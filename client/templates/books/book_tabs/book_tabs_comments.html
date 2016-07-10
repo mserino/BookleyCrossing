@@ -1,0 +1,42 @@
+<template name="bookTabsComments">
+  <div class="book-comments">
+    {{#if userHasNotCommented}}
+      <div class="book-comments__container col-xs-12 col-sm-6">
+        <button class="btn btn-large book-comments__button js-book-tabs-comment-add">Add a comment</button>
+        <form class="book-comments__text-container js-book-tabs-comment-add-form">
+          {{> starsRating id='rating' class='book-stars book-comments__text-stars' size='lg' mutable=true}}
+          <textarea
+            name="comment"
+            class="form-control js-book-comments-text form-control book-comments__input book-comments__input--textarea"
+            rows="5"
+            id="comments-text"
+            required></textarea>
+          <button class="btn btn-large book-comments__button js-book-tabs-comment-submit" type="submit">Submit</button>
+          <span class="book-comments__close js-book-tabs-comment-add-close">Cancel</span>
+        </form>
+      </div>
+    {{/if}}
+    {{#if comments}}
+      {{#each comments}}
+        <div class="book-comments__container col-xs-12">
+          <div class="book-comments__author">
+            <span class="book-comments__name">{{#with commentUser userId}}{{username}}{{/with}}</span> on {{convertDate submitted}}
+            {{#if ownsComment}}<a href="#" class="book-comments__delete js-book-tabs-comment-delete">Delete</a>{{/if}}
+          </div>
+          <div class="book-comments__stars">
+            {{#with stars}}
+              {{> starsRating class='book-stars' rating=this size='md'}}
+            {{/with}}
+          </div>
+          <div class="book-comments__comment">
+            {{comment}}
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      <div class="book-comments__container col-xs-12">
+        No comments have been added yet.
+      </div>
+    {{/if}}
+  </div>
+</template>

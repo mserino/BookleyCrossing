@@ -92,6 +92,24 @@
 			}
 		}
 	}
+	&__stars {
+		position: relative;
+		display: block;
+		.stars-rating {
+			display: inline-block;
+		}
+		&--length {
+			margin-left: 10px;
+			display: inline-block;
+			top: 50%;
+	    position: absolute;
+	    transform: translateY(-50%);
+			color: $main-black;
+			&:hover, &:focus, &:active {
+				color: $main-black;
+			}
+		}
+	}
 }
 
 @media (min-width: $screen-sm-min) {

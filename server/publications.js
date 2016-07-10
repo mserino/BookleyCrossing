@@ -13,3 +13,7 @@ Meteor.publish('roles', function (){
 Meteor.publish('history', function() {
 	return History.find();
 });
+
+Meteor.publish('comments', function() {
+	return Comments.find();
+});

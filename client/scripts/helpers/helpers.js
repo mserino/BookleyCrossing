@@ -35,6 +35,15 @@ if(Meteor.isClient) {
 		return _.size(array) === 0;
 	});
 
+	Template.registerHelper('starRating', function(book) {
+		var stars = book.stars;
+		if (stars) {
+			var reduced = stars.reduce(function(total, num){return total + num }, 0);
+			var average = reduced/stars.length;
+			return parseFloat(average).toFixed(1);
+		}
+	});
+
 	var isNew = function(date) {
 		var today = new Date(),
 			timeDiff = Math.floor((today - date) / (1000*60*60*24));

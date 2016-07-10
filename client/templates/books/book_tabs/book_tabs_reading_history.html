@@ -1,0 +1,20 @@
+<template name="bookTabsReadingHistory">
+  <div class="book-history">
+    {{#if records}}
+      {{#each records}}
+        <div class="book-history__container">
+          <div class="book-history__user">
+            <span class="book-history__username">{{#with recordUser userId}}{{username}}{{/with}}</span>
+            from {{convertDate from}} to {{convertDate to}} ({{difference}} days)
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      <div class="book-history__container">
+        <div class="book-history__user">
+          This book hasn't been borrowed yet.
+        </div>
+      </div>
+    {{/if}}
+  </div>
+</template>

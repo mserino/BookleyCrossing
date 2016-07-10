@@ -1,5 +1,20 @@
 .book-history {
+    &__container {
+      padding: 10px 0;
+      &:last-of-type {
+        .book-history__user {
+          border: none;
+        }
+      }
+    }
     &__username {
-        @include typographyBold;
+      @include typographyBold;
+      @include fontSansSerif;
+      display: block;
+      margin-bottom: 10px;
+    }
+    &__user {
+      padding-bottom: 20px;
+      border-bottom: 1px solid $light-grey;
     }
 }

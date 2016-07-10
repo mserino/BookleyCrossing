@@ -1,0 +1,8 @@
+.book-stars {
+  & .current-rating {
+    color: $main-orange;
+  }
+  & .active {
+    color: darken($main-orange, 10%);
+  }
+}
