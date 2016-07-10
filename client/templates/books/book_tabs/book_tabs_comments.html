@@ -21,6 +21,7 @@
         <div class="book-comments__container col-xs-12">
           <div class="book-comments__author">
             <span class="book-comments__name">{{#with commentUser userId}}{{username}}{{/with}}</span> on {{convertDate submitted}}
+            {{#if ownsComment}}<a href="#" class="book-comments__delete js-book-tabs-comment-delete">Delete</a>{{/if}}
           </div>
           <div class="book-comments__stars">
             {{#with stars}}

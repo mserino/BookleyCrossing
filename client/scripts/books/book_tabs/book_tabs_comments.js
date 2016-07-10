@@ -29,7 +29,14 @@ if(Meteor.isClient) {
 			Meteor.call('addComment', commentObject, bookId, function() {
 				FlashMessages.sendSuccess('Comment successfully added', {autoHide: true, hideDelay: 5000});
 			});
-    }
+    },
+		'click .js-book-tabs-comment-delete': function(e) {
+			e.preventDefault();
+			var comment = this;
+			var user = Meteor.user();
+
+			Meteor.call('deleteComment', comment, user);
+		}
   });
 
 	Template.bookTabsComments.helpers({
@@ -47,6 +54,10 @@ if(Meteor.isClient) {
 				var comments = Comments.find({$and: [{bookId: this._id}, {userId: user._id}]}).fetch();
 				return comments.length < 1;
 			}
+		},
+		ownsComment: function() {
+			var user = Meteor.user();
+			return user._id === this.userId || Roles.userIsInRole(Meteor.userId(), ['admin']);
 		}
 	});
 

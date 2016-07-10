@@ -57,4 +57,9 @@
     padding-bottom: 20px;
     border-bottom: 1px solid $light-grey;
   }
+  &__delete {
+    display: inline-block;
+    font-size: 1rem;
+    margin-left: 10px;
+  }
 }

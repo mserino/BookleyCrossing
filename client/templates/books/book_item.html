@@ -5,10 +5,10 @@
 		</div>
 		<div class="col-xs-12 col-sm-6 book-detail__description">
 			<a href="#commentsTarget" class="book-detail__stars">
-				{{#with starRating this}}
-					{{> starsRating rating=this class='book-stars'  size='lg'}}
-				{{/with}}
 				{{#if this.stars.length}}
+					{{#with starRating this}}
+						{{> starsRating rating=this class='book-stars'  size='lg'}}
+					{{/with}}
 					<span class="book-detail__stars--length">({{this.stars.length}} comments)</span>
 				{{/if}}
 			</a>
